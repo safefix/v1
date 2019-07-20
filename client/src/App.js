@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Security, ImplicitCallback } from '@okta/okta-react';
 import Home from './Home';
-import {withAuth as WithAuth} from "./authComponent";
+// import {withAuth as WithAuth} from "./authComponent";
+import Form from './components/Form';
 
 const config = {
   issuer: 'https://dev-631231.okta.com/oauth2/default',
@@ -16,7 +16,8 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <WithAuth />
+        {/* <WithAuth /> */}
+        <Form />
         <Security issuer={config.issuer}
                   client_id={config.client_id}
                   redirect_uri={config.redirect_uri}
