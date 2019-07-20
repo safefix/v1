@@ -1,3 +1,4 @@
+console.log(process.env.LOCALPW);
 const express = require("express");
 const routes = require("./routes");
 const app = express();
@@ -8,7 +9,7 @@ var cors = require('cors');
 
 const oktaJwtVerifier = new OktaJwtVerifier({
   issuer: 'https://dev-631231.okta.com/oauth2/default',
-  clientId: '{clientId}',
+  clientId: '0oayb8u1gYYwATKNA356',
   assertClaims: {
     aud: 'api://default',
   },
@@ -40,7 +41,7 @@ if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: process.env.LOCALPW,
+        password: "Shalom77&",
         database: "handShake"
     });
 }; 
