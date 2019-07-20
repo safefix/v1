@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
 import Form from './components/Form';
-import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
 
 function App() {
   return (
