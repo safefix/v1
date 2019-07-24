@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./style.css"
 
 class ProjectForm extends Component {
     state = {
@@ -38,25 +39,29 @@ class ProjectForm extends Component {
 render () {
     return (
         <div>
-            <h4>Project Form</h4>
-            <form className="text-left">
-                <div className="form-group">
+            <form className="text-left project-form secondary-background">
+            <h4 className="text-center" id="form-title">Project Form</h4>
+                <div className="form-group input-section">
+                    <ion-icon name="construct" className="icons"></ion-icon>
                     <label for="projectName">Project Name</label>
-                    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Project Name"/>
+                    <input type="text" className="form-control" id="formGroupExampleInput"/>
                 </div>
 
                 <div className="form-group">
+                    <ion-icon name="home"></ion-icon>
                     <label for="residentialAddress">Residential Address</label>
-                    <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Residential Address"/>
+                    <input type="text" className="form-control" id="formGroupExampleInput"/>
                 </div>
 
             <div className="form-row">
                 <div className="form-group col-md-6">
+                    <ion-icon name="outlet"></ion-icon>
                     <label for="inputCity">City</label>
                     <input type="text" class="form-control" id="inputCity"/>
                 </div>
 
                 <div className="form-group col-md-4">
+                    <ion-icon name="pin"></ion-icon>
                     <label for="inputState">State</label>
                     <select id="inputState" class="form-control">
                     <option selected>Choose...</option>
@@ -65,6 +70,7 @@ render () {
                 </div>
 
                 <div className="form-group col-md-2">
+                    <ion-icon name="compass"></ion-icon>
                     <label for="inputZip">Zip</label>
                     <input type="text" class="form-control" id="inputZip"/>
                 </div>
@@ -73,6 +79,7 @@ render () {
             <div className="form-row">
 
                 <div className="form-group col-md-6">
+                <ion-icon name="reorder"></ion-icon>
                 <label for="repairCategory">Repair Category:</label>
                     <select id="inputState" class="form-control">
                     <option selected>Choose...</option>
@@ -81,6 +88,7 @@ render () {
                 </div>
 
                 <div className="form-group col-md-6">
+                <ion-icon name="alarm"></ion-icon>
                 <label for="repairTimeline">Repair Timeline:</label>
                     <select id="inputState" class="form-control">
                     <option selected>Choose...</option>
@@ -91,8 +99,19 @@ render () {
             </div>
 
             <div className="form-group">
+              <ion-icon name="clipboard"></ion-icon>
+              <label for="repairDetail">Repair Detail</label>
+              <textarea className="form-control" id="repairDetails" rows="2"></textarea> 
+            </div>
+
+            <div className="form-group">
+                <ion-icon name="text"></ion-icon>
                 <label for="repairComments">Repair Comments:</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+
+            <div className="col text-center">
+            <input className="btn btn-primary btn-block" type="submit" value="Submit" id="submit-form"/>
             </div>
 
             </form>
