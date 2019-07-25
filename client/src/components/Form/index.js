@@ -1,17 +1,21 @@
 /* eslint-disable no-unused-vars */
 import React, {Component} from "react";
+import Button from 'react-bootstrap/Button';
 
 class Form extends Component{
     //initial state of the component
     state = {
-        firstName: "",
-        lastName: "",
-        phoneNumber: "",
-        email: "",
-        resAddress: "",
-        serviceReq: "",
-        budget: "",
-        timeline: ""
+        projectName: "",
+        residenceNumber: "",
+        residenceStreet: "",
+        residenceAddr2: "",
+        residenceCity: "",
+        residenceState: "",
+        residenceZip: "",
+        repairCategory: "",
+        repairDetail: "",
+        repairTimeline: "", 
+        otherComments: ""
     }
 
     handleInputChange = event => {
@@ -27,14 +31,17 @@ class Form extends Component{
     
         alert(`Thank you, ${this.state.firstName}. Your project has been submited.`);
         this.setState({
-            firstName: "",
-            lastName: "",
-            phoneNumber: "",
-            email: "",
-            resAddress: "",
-            serviceReq: "",
-            budget: "",
-            timeline: ""
+            projectName: "",
+            residenceNumber: "",
+            residenceStreet: "",
+            residenceAddr2: "",
+            residenceCity: "",
+            residenceState: "",
+            residenceZip: "",
+            repairCategory: "",
+            repairDetail: "",
+            repairTimeline: "", 
+            otherComments: ""
         });
       };
 
@@ -45,59 +52,75 @@ class Form extends Component{
             <div>
                 <form className="form">
                     <input
-                    value={this.state.firstName}
-                    name="firstName"
+                    value={this.state.projectName}
+                    name="projectName"
                     onChange={this.handleInputChange}
                     type="text"
-                    placeholder="First Name"
+                    placeholder="Project Name"
                     />
                     <br/>
                     <input
-                    value={this.state.lastName}
-                    name="lastName"
+                    value={this.state.residenceNumber}
+                    name="residenceNumber"
+                    onChange={this.handleInputChange}
+                    type="text" pattern="[0-9]*"
+                    placeholder="Residence Number"
+                    />
+                    <br/>
+                    <input
+                    value={this.state.residenceStreet}
+                    name="residenceStreet"
                     onChange={this.handleInputChange}
                     type="text"
-                    placeholder="Last Name"
+                    placeholder="Address Line 1"
                     />
                     <br/>                   
                     <input
-                    value={this.state.phoneNumber}
-                    name="phoneNumber"
-                    onChange={this.handleInputChange}
-                    type="text" pattern="[0-9]*"
-                    placeholder="Phone Number"
-                    />
-                    <br/>
-                    <input
-                    value={this.state.email}
-                    name="email"
-                    onChange={this.handleInputChange}
-                    type="email" 
-                    placeholder="Email"
-                    />
-                    <br/>
-                    <input
-                    value={this.state.resAddress}
-                    name="resAddress"
+                    value={this.state.residenceAddr2}
+                    name="residenceAddr2"
                     onChange={this.handleInputChange}
                     type="text" 
-                    placeholder="Residential Address"
+                    placeholder="Address Line 2"
                     />
                     <br/>
                     <input
-                    value={this.state.serviceReq}
-                    name="serviceReq"
+                    value={this.state.residenceCity}
+                    name="residenceCity"
                     onChange={this.handleInputChange}
                     type="text" 
-                    placeholder="Service Requested"
+                    placeholder="City"
                     />
                     <br/>
                     <input
-                    value={this.state.budget}
-                    name="budget"
+                    value={this.state.residenceState}
+                    name="residenceState"
                     onChange={this.handleInputChange}
-                    type="text" pattern="[0-9]*"
-                    placeholder="Budget"
+                    type="text" 
+                    placeholder="State"
+                    />
+                    <br/>
+                    <input
+                    value={this.state.residenceZip}
+                    name="residenceZip"
+                    onChange={this.handleInputChange}
+                    type="text" pattern="[0-9]*" 
+                    placeholder="Zip Code"
+                    />
+                    <br/>
+                    <input
+                    value={this.state.repairCategory}
+                    name="repairCategory"
+                    onChange={this.handleInputChange}
+                    type="text" 
+                    placeholder="Repair Category"
+                    />
+                    <br/>
+                    <input
+                    value={this.state.repairDetail}
+                    name="repairDetail"
+                    onChange={this.handleInputChange}
+                    type="text" 
+                    placeholder="Repair Detail"
                     />
                     <br/>
                     <input
@@ -106,6 +129,14 @@ class Form extends Component{
                     onChange={this.handleInputChange}
                     type="date" 
                     placeholder="Timeline"
+                    />
+                    <br/>
+                    <input
+                    value={this.state.otherComments}
+                    name="otherCoomments"
+                    onChange={this.handleInputChange}
+                    type="text" 
+                    placeholder="Additional Comment"
                     />
                     <br/>
                     <button onClick={this.handleFormSubmit}>Submit</button>
@@ -126,3 +157,4 @@ export default Form;
 
 // add fielcs based on the TableSchemas
 // missing 3rd party comment field on schema
+
