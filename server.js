@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: process.env.LOCALPW,
+        password: null,
         database: "handShake"
     });
 }; 
@@ -21,6 +21,7 @@ module.exports = connection;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
