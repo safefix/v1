@@ -1,3 +1,13 @@
 .secondary-background {
     background-color: #9aaebb;
 }
+
+.hero-text {
+    font-weight: bolder;
+    color: white;
+}
+
+.hero-subtext {
+    font-weight: bold;
+    color: white;
+}

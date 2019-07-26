@@ -18,6 +18,7 @@ class App extends Component {
       <Hero />
       <div class="container">
       <Login />
+      <br/>
       <SubmitBid />
       <div class="row">
         <div class="col-6">
