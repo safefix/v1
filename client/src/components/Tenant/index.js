@@ -48,14 +48,14 @@ handleFormSubmit = event => {
                       <br/>
                 <button onClick={this.handleFormSubmit}>Submit</button>
                 </form>
-                <div class="calendly-inline-widget" style="min-width:320px;height:580px;" data-auto-load="false">
-                Calendly.initInlineWidget({
+                {/* <div class="calendly-inline-widget" style="min-width:320px;height:580px;" data-auto-load="false"> */}
+                {Calendly.initInlineWidget({
                     url: 'https://calendly.com/terena-blasberg',
                     prefill: {},
                     utm: {}
-                });
+                })}
             </div>
-          </div>
+        //   </div>
         )
     }
 }
