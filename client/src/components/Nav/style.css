@@ -5,3 +5,26 @@ body {
 .primary-background {
     background-color: #156382;
 }
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    border: 1px solid #9aaebb;
+    height: 100%;
+    margin: 2px;
+    color: white;
+}
+
+#navbar-nav:hover {
+    background-color: yellow;
+}
+
+.nav-logo {
+    margin-left: 0;
+}
+
+.nav-item {
+    font-size: 18px;
+}
