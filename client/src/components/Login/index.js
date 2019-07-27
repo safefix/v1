@@ -10,6 +10,7 @@ const Login = () => {
         <button
           onClick={() =>
             loginWithRedirect({})
+            
           }
         >
           Log in
