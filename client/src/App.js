@@ -9,6 +9,12 @@ import ProjectForm from './components/ProjectForm';
 import SubmitBid from "./components/SubmitBid";
 import Login from './components/Login';
 import TenantForm from './components/TenantForm';
+import Calendly from './components/Calendly'
+
+// const styleObj = {
+//   width: "320px", 
+//   height: "630px"
+// };
 
 class App extends Component {
   render() {
@@ -18,6 +24,7 @@ class App extends Component {
       <Hero />
       <div class="container">
       <Login />
+      <Calendly />
       <SubmitBid />
       <br/>
       <div class="row">
