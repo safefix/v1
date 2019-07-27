@@ -41,7 +41,7 @@ class SubmitBid extends Component {
             <div>
             
             <form className="submit-bid-form text-left secondary-background">
-                <h4 className="text-center" id="form-title">Submit Your Bid</h4>
+                <h4 className="text-center" id="submit-bid-form-title">Contractor Form</h4>
                 
                 <div className="form-row">
                   <div className="form-group col-md-6 form-first-name">

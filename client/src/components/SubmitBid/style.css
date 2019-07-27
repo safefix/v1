@@ -47,7 +47,7 @@
 
     }
 
-   /* :hover{
+   /* :hover {
 
       background-position: 0 -100%;
 
@@ -64,3 +64,9 @@
 /* #upload-icon:hover {
     color: #364954
 } */
+
+#submit-bid-form-title {
+  color: white;
+  font-weight: bolder;
+  padding-bottom: 15px;
+}
