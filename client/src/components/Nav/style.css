@@ -2,10 +2,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.primary-background {
-    background-color: #156382;
-}
-
 .nav-link {
     color: white;
 }
@@ -17,14 +13,14 @@ body {
     color: white;
 }
 
-#navbar-nav:hover {
-    background-color: yellow;
+.nav-item {
+    font-size: 18px;
+}
+
+.nav-background {
+    background-color: #364954;
 }
 
 .nav-logo {
-    margin-left: 0;
-}
-
-.nav-item {
-    font-size: 18px;
+    margin-right: 15px
 }

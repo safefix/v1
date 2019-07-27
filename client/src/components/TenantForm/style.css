@@ -4,28 +4,24 @@ ion-icon {
     font-size: 24px;
 }
 
-.project-form {
+.tenant-form {
     padding: 15px;
     border-radius: 20px;
 }
 
-#submit-form {
+#submit-tenant-form {
     background-color: #ac8764;
     color: white;
     font-weight: bold;
     margin-bottom: 6px;
 }
 
-#submit-form:hover {
+#submit-tenant-form:hover {
     background-color: #364954;
     font-weight: bolder;
 }
 
-.primary-background {
-    background-color: #156382;
-}
-
-#form-title {
+#tenant-form-header {
     color: white;
     font-weight: bold;
 }

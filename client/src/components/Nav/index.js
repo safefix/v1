@@ -3,7 +3,7 @@ import "./style.css";
 
 function Nav (props) {
   return (
-<nav className="navbar navbar-expand-sm sticky-top primary-background">
+<nav className="navbar navbar-expand-sm sticky-top nav-background">
     <img className="nav-logo" src="http://www.iconninja.com/files/866/283/681/handshake-icon.png" alt="handshake" height="65px" width="65px"/>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>

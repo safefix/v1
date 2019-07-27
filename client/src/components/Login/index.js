@@ -20,7 +20,7 @@ const Login = () => {
         >
           <p className="btnText">LOGIN?</p>
           <div className="btnTwo">
-            <p className="btnText2">DEAL</p>
+            <p className="btnText2">GO!</p>
           </div>
         </button>
 
