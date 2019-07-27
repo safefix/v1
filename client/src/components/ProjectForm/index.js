@@ -57,13 +57,13 @@ render () {
                 <div className="form-group col-md-6">
                     <ion-icon name="outlet"></ion-icon>
                     <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity"/>
+                    <input type="text" className="form-control" id="inputCity"/>
                 </div>
 
                 <div className="form-group col-md-4">
                     <ion-icon name="pin"></ion-icon>
                     <label for="inputState">State</label>
-                      <select id="inputState" class="form-control">
+                      <select id="inputState" className="form-control">
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -121,7 +121,7 @@ render () {
                 <div className="form-group col-md-2">
                     <ion-icon name="compass"></ion-icon>
                     <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip"/>
+                    <input type="text" className="form-control" id="inputZip"/>
                 </div>
             </div>
 
@@ -130,7 +130,7 @@ render () {
                 <div className="form-group col-md-6">
                 <ion-icon name="reorder"></ion-icon>
                 <label for="repairCategory">Repair Category:</label>
-                    <select id="repair-category" class="form-control">
+                    <select id="repair-category" className="form-control">
                       <option value="option-1">This</option>
                       <option value="option-2">That</option>
                       <option value="option-3">Or</option>

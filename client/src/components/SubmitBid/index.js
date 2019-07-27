@@ -46,12 +46,12 @@ class SubmitBid extends Component {
                 <div className="form-row">
                   <div className="form-group col-md-6 form-first-name">
                     <label for="input-first-name">First Name</label>
-                    <input type="text" class="form-control" id="bidder-first-name"/>
+                    <input type="text" className="form-control" id="bidder-first-name"/>
                   </div>
 
                   <div className="form-group col-md-6">
                     <label for="input-last-name">Last Name</label>
-                    <input type="text" class="form-control" id="bidder-last-name"/>
+                    <input type="text" className="form-control" id="bidder-last-name"/>
                   </div>
 
                 </div>
@@ -68,14 +68,14 @@ class SubmitBid extends Component {
                   <div className="form-group col-md-12">
                     <ion-icon name="mail"></ion-icon>
                     <label for="email">Email</label>
-                    <input type="text" class="form-control" id="bidder-email"/>
+                    <input type="text" className="form-control" id="bidder-email"/>
                   </div>
                 </div>
 
                 <div className="form-row">
                   <div className="form-group col-md-12">
                     <label for="company-name">Company Name</label>
-                    <input type="text" class="form-control" id="bidder-company-name"/>
+                    <input type="text" className="form-control" id="bidder-company-name"/>
                   </div>
                 </div>
 
@@ -84,7 +84,7 @@ class SubmitBid extends Component {
                   <div className="form-group col-md-9">
                     <ion-icon name="cash"></ion-icon>
                     <label for="proposed-price">Proposed Price</label>
-                    <input type="text" class="form-control" id="bidder-proposed-price"/>
+                    <input type="text" className="form-control" id="bidder-proposed-price"/>
                   </div>
 
                   <div className="form-group col-md-3 text-center">
@@ -92,8 +92,8 @@ class SubmitBid extends Component {
                   <label for="attach-images text-center">Attach Important Files</label>
                   
 
-                    <div class="wrapper">
-                      <div class="file-upload">
+                    <div className="wrapper">
+                      <div className="file-upload">
                         <input type="file" />
                         <ion-icon name="cloud-upload" id="upload-icon"></ion-icon>
                       </div>
@@ -107,14 +107,14 @@ class SubmitBid extends Component {
                   <div className="form-group col-md-12">
                     <ion-icon name="calendar"></ion-icon>
                     <label for="project-timeframe">Project timeframe</label>
-                    <input type="text" class="form-control" id="bidder-timeframe"/>
+                    <input type="text" className="form-control" id="bidder-timeframe"/>
                   </div>
                 </div>
 
                 <div className="form-group">
                   <ion-icon name="clipboard"></ion-icon>
                   <label for="project-notes">Project Notes</label>
-                  <textarea class="form-control" id="bidder-project-notes" rows="3"></textarea>
+                  <textarea className="form-control" id="bidder-project-notes" rows="3"></textarea>
                 </div>
             
                 <div className="col text-center">
