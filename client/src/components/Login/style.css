@@ -1,8 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:700);
-html, body{background-color: lightgrey; font-family : Roboto; height: 100%; width: 100%; margin: 0;}
-
-
-#holder{
+#holder {
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -16,6 +12,7 @@ html, body{background-color: lightgrey; font-family : Roboto; height: 100%; widt
   box-shadow: 0px 3px 8px rgba(0,0,0,0.25);
   border-radius: 2px;
 }
+
 button {
   background-color: #3D4C53;
   margin : 20px auto;
@@ -28,6 +25,7 @@ button {
   border-radius: 3px;
   box-shadow: 0px 1px 2px rgba(0,0,0,.2);
 }
+
 .btnTwo {
   position : relative;
   width : 200px;
@@ -38,25 +36,30 @@ button {
   left : -250px;
   transition : .3s;
 }
+
 .btnText {
   color: white;
   font-weight: bolder;
   transition : .3s;
   padding-top: 10px;
 }
+
 .btnText2 {
   margin-top : 55px;
   margin-right : -130px;
   color : #FFF;
   font-weight: bolder;
 }
+
 button:hover .btnTwo{ /*When hovering over .button change .btnTwo*/
   left: -130px;
   border: 3px solid white
 }
+
 button:hover .btnText{ /*When hovering over .button change .btnText*/
   margin-left : 72px;
 }
+
 button:active { /*Clicked and held*/
   box-shadow: 0px 5px 6px rgba(0,0,0,0.3);
 }

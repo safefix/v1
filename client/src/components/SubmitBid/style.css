@@ -7,3 +7,60 @@
 .secondary-background {
     background-color: #9aaebb;
 }
+
+
+.wrapper {
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+  
+.file-upload {
+
+    height:60px;
+    width:60px;
+    border-radius: 100px;
+    position:relative;
+    
+    display:flex;
+    justify-content:center;
+    align-items: center;  
+
+    border:2px solid #FFFFFF;
+    background-image: linear-gradient(to bottom, #364954 50%, #FFFFFF 50%);
+    background-size: 100% 200%;
+    transition: all .5s;
+    color: #FFFFFF;
+    font-size:100px;
+  }
+
+    input[type='file']{
+
+      height:400px;
+      width:400px;
+      position:absolute;
+      top:0;
+      left:0;
+      opacity:0;
+      cursor:pointer;
+      padding: 5px;
+
+    }
+
+   /* :hover{
+
+      background-position: 0 -100%;
+
+      color:#364954;
+
+    }  */
+
+#upload-icon {
+    font-size: 40px;
+    padding-left: 4px;
+    color: white;
+}
+
+/* #upload-icon:hover {
+    color: #364954
+} */

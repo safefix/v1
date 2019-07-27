@@ -11,3 +11,16 @@
     font-weight: bold;
     color: white;
 }
+
+.jumbotron {
+    background-image: url("http://oi67.tinypic.com/2gsreyc.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: .6;
+}
+
+
+.image-text {
+    opacity: 1;
+}

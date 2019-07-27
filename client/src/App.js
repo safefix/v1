@@ -18,8 +18,8 @@ class App extends Component {
       <Hero />
       <div class="container">
       <Login />
-      <br/>
       <SubmitBid />
+      <br/>
       <div class="row">
         <div class="col-6">
           <Form />
@@ -29,6 +29,7 @@ class App extends Component {
         </div>
       </div>
       </div>
+      <br/>
       <Footer />
     </div>
   );
