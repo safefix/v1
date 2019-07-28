@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "./style.css";
 
 
 class CustomButton extends Component {
@@ -6,7 +7,7 @@ class CustomButton extends Component {
         const { onPress, children } = this.props;
 
         return (
-            <button type="button" onClick={onPress}>
+            <button type="button" id="schedule-calendly" onClick={onPress}>
               {children}
             </button>
         );
@@ -25,6 +26,7 @@ class CalendlyWidget extends Component {
         return (
         <div>
             <CustomButton onPress={this.handleEvent}>
+            <ion-icon name="calendar" id="calendar-button-icon"></ion-icon>
             Schedule A Calendly Meeting
             </CustomButton>
         </div>
@@ -33,7 +35,4 @@ class CalendlyWidget extends Component {
 }
 
 export default CalendlyWidget;
-
-
-//<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kstokes16'});return false;">Schedule time with me</a>
 

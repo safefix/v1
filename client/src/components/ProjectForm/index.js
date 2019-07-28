@@ -166,7 +166,10 @@ render () {
             </div>
 
             <div className="col text-center submit-button">
-            <input className="btn btn-block" type="submit" value="Submit" id="submit-form"/>
+            <button className="btn btn-block" type="submit" value="Submit" id="submit-form">
+                    <ion-icon name="checkmark-circle-outline" id="contractor-submit-form-icon"></ion-icon>
+                  Submit
+                  </button>
             </div>
 
             </form>

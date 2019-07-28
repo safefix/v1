@@ -23,17 +23,15 @@ class App extends Component {
     <div className="App">
       <Nav />
       <Hero />
-      <div class="container">
+      <div className="container">
       <Login />
-      <Calendly />
-      <CalendlyWidget />
       <ContractorForm />
       <br/>
-      <div class="row">
-        <div class="col-6">
+      <div className="row">
+        <div className="col-6">
           <ProjectForm />
         </div>
-        <div class="col-6">
+        <div className="col-6">
           <TenantForm />
         </div>
       </div>

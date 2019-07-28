@@ -18,7 +18,7 @@ body {
 }
 
 .nav-background {
-    background-color: #364954;
+    background-image: linear-gradient(to left top, #364954, #4e616c, #667a86, #8093a0, #9aaebb);
 }
 
 .nav-logo {

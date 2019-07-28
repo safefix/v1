@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./style.css"
+import CalendlyWidget from "../CalendlyWidget";
 
 class ContractorForm extends Component {
     // state = {
@@ -117,10 +118,7 @@ class ContractorForm extends Component {
                   </div>
 
                   <div className="form-group col-md-6">
-                    <button type="button" class="btn btn-block" id="calendar-button">
-                    <ion-icon name="calendar" id="calendar-button-icon"></ion-icon>
-                    Click here to schedule a date
-                    </button>
+                    <CalendlyWidget />
                   </div>
 
                 </div>
@@ -132,7 +130,10 @@ class ContractorForm extends Component {
                 </div>
             
                 <div className="col text-center">
-                  <input className="btn btn-block" type="submit" value="Submit" id="submit-form"/>
+                  <button className="btn btn-block" type="submit" value="Submit" id="submit-form">
+                    <ion-icon name="checkmark-circle-outline" id="contractor-submit-form-icon"></ion-icon>
+                  Submit
+                  </button>
                 </div>
 
     
