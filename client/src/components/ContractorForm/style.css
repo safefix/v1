@@ -36,8 +36,9 @@
 
     input[type='file']{
 
-      height:400px;
-      width:400px;
+      height:100px;
+      width:100px;
+      margin-bottom: 100px;
       position:absolute;
       top:0;
       left:0;

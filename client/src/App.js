@@ -10,6 +10,7 @@ import ContractorForm from "./components/ContractorForm";
 import Login from './components/Login';
 import TenantForm from './components/TenantForm';
 import Calendly from './components/Calendly';
+import CalendlyWidget from './components/CalendlyWidget';
 
 // const styleObj = {
 //   width: "320px", 
@@ -25,6 +26,7 @@ class App extends Component {
       <div class="container">
       <Login />
       <Calendly />
+      <CalendlyWidget />
       <ContractorForm />
       <br/>
       <div class="row">
