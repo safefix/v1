@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import "./style.css"
 
-class SubmitBid extends Component {
+class ContractorForm extends Component {
     // state = {
     //     // fields on input form
     //     projectName: "",
@@ -104,11 +104,25 @@ class SubmitBid extends Component {
                 </div>
 
                 <div className="form-row">
-                  <div className="form-group col-md-12">
-                    <ion-icon name="calendar"></ion-icon>
+
+                  <div className="form-group col-md-6">
+                    <ion-icon name="clock"></ion-icon>
                     <label for="project-timeframe">Project timeframe</label>
-                    <input type="text" className="form-control" id="bidder-timeframe"/>
+                    <select id="bidder-timeframe" className="form-control">
+                        <option value="A">Under 1 Week</option>
+                        <option value="B">1-2 Weeks</option>
+                        <option value="C">2-3 Weeks</option>
+                        <option value="D">Other</option>
+                    </select>
                   </div>
+
+                  <div className="form-group col-md-6">
+                    <button type="button" class="btn btn-block" id="calendar-button">
+                    <ion-icon name="calendar" id="calendar-button-icon"></ion-icon>
+                    Click here to schedule a date
+                    </button>
+                  </div>
+
                 </div>
 
                 <div className="form-group">
@@ -130,4 +144,4 @@ class SubmitBid extends Component {
 
 }
 
-export default SubmitBid;
+export default ContractorForm;

@@ -70,3 +70,17 @@
   font-weight: bolder;
   padding-bottom: 15px;
 }
+
+#calendar-button {
+  display: inline-flex;
+  margin-top: 38px;
+  color: white;
+  height: 39px;
+  background-color: #364954;
+  font-size: 18px;
+  padding-left: 140px;
+}
+
+#calendar-button-icon {
+  color: white;
+}

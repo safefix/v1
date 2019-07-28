@@ -6,10 +6,10 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import ProgressBar from "./components/ProgessBar";
 import ProjectForm from './components/ProjectForm';
-import SubmitBid from "./components/SubmitBid";
+import ContractorForm from "./components/ContractorForm";
 import Login from './components/Login';
 import TenantForm from './components/TenantForm';
-import Calendly from './components/Calendly'
+import Calendly from './components/Calendly';
 
 // const styleObj = {
 //   width: "320px", 
@@ -25,7 +25,7 @@ class App extends Component {
       <div class="container">
       <Login />
       <Calendly />
-      <SubmitBid />
+      <ContractorForm />
       <br/>
       <div class="row">
         <div class="col-6">
