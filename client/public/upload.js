@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 $(document).ready(function(){
     
 
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
-    const redirect_uri = "https://localhost/upload.html" // replace with your redirect_uri;
+    const redirect_uri = "http://localhost/upload.html" // replace with your redirect_uri;
     const client_secret = "uTN4j5__f78cxICSMWvDN2e4"; // replace with your client secret
     const scope = "https://www.googleapis.com/auth/drive";
     var access_token= "";
