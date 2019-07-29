@@ -41,7 +41,7 @@ class SubmitBid extends Component {
             <div>
             
             <form className="submit-bid-form text-left secondary-background">
-                <h4 className="text-center" id="form-title">Submit Your Bid</h4>
+                <h4 className="text-center" id="submit-bid-form-title">Contractor Form</h4>
                 
                 <div className="form-row">
                   <div className="form-group col-md-6 form-first-name">
@@ -81,16 +81,24 @@ class SubmitBid extends Component {
 
                 <div className="form-row">
 
-                  <div className="form-group col-md-6">
+                  <div className="form-group col-md-9">
                     <ion-icon name="cash"></ion-icon>
                     <label for="proposed-price">Proposed Price</label>
                     <input type="text" class="form-control" id="bidder-proposed-price"/>
                   </div>
 
-                  <div className="form-group col-md-6">
+                  <div className="form-group col-md-3 text-center">
                   <ion-icon name="attach"></ion-icon>
-                  <label for="attach-images">Attach Important Files</label>
-                  <input type="file" className="form-control-file" id="bidder-file-upload"/>
+                  <label for="attach-images text-center">Attach Important Files</label>
+                  
+
+                    <div class="wrapper">
+                      <div class="file-upload">
+                        <input type="file" />
+                        <ion-icon name="cloud-upload" id="upload-icon"></ion-icon>
+                      </div>
+                    </div>
+
                   </div>
 
                 </div>
@@ -110,7 +118,7 @@ class SubmitBid extends Component {
                 </div>
             
                 <div className="col text-center">
-                  <input className="btn btn-primary btn-block" type="submit" value="Submit" id="submit-form"/>
+                  <input className="btn btn-block" type="submit" value="Submit" id="submit-form"/>
                 </div>
 
     

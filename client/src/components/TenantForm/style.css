@@ -1,0 +1,31 @@
+ion-icon {
+    color: #364954;
+    margin-right: 6px;
+    font-size: 24px;
+}
+
+.tenant-form {
+    padding: 15px;
+    border-radius: 20px;
+}
+
+#submit-tenant-form {
+    background-color: #ac8764;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+#submit-tenant-form:hover {
+    background-color: #364954;
+    font-weight: bolder;
+}
+
+#tenant-form-header {
+    color: white;
+    font-weight: bold;
+}
+
+label {
+    color: #364954;
+}
