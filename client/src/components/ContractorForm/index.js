@@ -106,7 +106,7 @@ class ContractorForm extends Component {
 
                 <div className="form-row">
 
-                  <div className="form-group col-md-6">
+                  <div className="form-group col-lg-6">
                     <ion-icon name="clock"></ion-icon>
                     <label for="project-timeframe">Project timeframe</label>
                     <select id="bidder-timeframe" className="form-control">
@@ -117,7 +117,7 @@ class ContractorForm extends Component {
                     </select>
                   </div>
 
-                  <div className="form-group col-md-6">
+                  <div className="form-group col-lg-6">
                     <CalendlyWidget />
                   </div>
 

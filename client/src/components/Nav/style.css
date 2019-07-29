@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.nav-link {
+.nav-link, .navbar-brand {
     color: white;
 }
 
@@ -18,9 +18,24 @@ body {
 }
 
 .nav-background {
-    background-image: linear-gradient(to left top, #364954, #4e616c, #667a86, #8093a0, #9aaebb);
+    background-color: #364954;
 }
 
 .nav-logo {
     margin-right: 15px
+}
+
+.navbar-toggler {
+    background-color: white;
+    color: royalblue;
+    opacity: .5;
+}
+
+.navbar-toggler navbar-toggler-icon {
+    color: black;
+    font-size: 80px;
+}
+
+.navbar-brand:hover {
+    color: white;
 }
