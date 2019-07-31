@@ -7,13 +7,13 @@ class TenantForm extends Component {
       this.state = {
         firstName: '',
         lastName: '',
-        phoneNumber: '',
+        phone: '',
         email: '',
-        residenceAddress: '',
-        city: '',
-        state: '',
-        zip: '',
-        comments: ''
+        residenceAddr: '',
+        residenceCity: '',
+        residenceState: '',
+        residenceZip: '',
+        com00: ''
       }
     }
 
@@ -40,12 +40,12 @@ render () {
 
                     <div className="form-group col-md-6">
                       <label for="tenantFirstName">First Name</label>
-                      <input type="text" className="form-control" id="tenant-first-name-input"/>
+                      <input type="text" value={this.state.firstName} onChange={this.handleInputChange} name="firstName" className="form-control" id="tenant-first-name-input"/>
                     </div>
 
                     <div className="form-group col-md-6">
                       <label for="tenantLastName">Last Name</label>
-                      <input type="text" className="form-control" id="tenant-last-name-input"/>
+                      <input type="text" value={this.state.lastName} onChange={this.handleInputChange} name="lastName" className="form-control" id="tenant-last-name-input"/>
                     </div>
 
                 </div>
@@ -55,13 +55,13 @@ render () {
                   <div className="form-group col-md-4">
                     <ion-icon name="phone-portrait"></ion-icon>
                     <label for="tenantPhoneNumber">Phone #</label>
-                    <input type="text" className="form-control" id="tenant-phone-number"/>
+                    <input type="text" value={this.state.phone} onChange={this.handleInputChange} name="phone" className="form-control" id="tenant-phone-number"/>
                   </div>
 
                   <div className="form-group col-md-8">
                     <ion-icon name="mail"></ion-icon>
                     <label for="tenantEmail">Email</label>
-                    <input type="text" className="form-control" id="tenant-email-address"/>
+                    <input type="text" value={this.state.email} onChange={this.handleInputChange} name="email" className="form-control" id="tenant-email-address"/>
                   </div>
 
                 </div>
@@ -69,20 +69,20 @@ render () {
             <div className="form-group">
             <ion-icon name="home"></ion-icon>
               <label for="tenantResidentialAddress">Address of Repair Location</label>
-              <input type="text" className="form-control" id="tenant-repair-address"/> 
+              <input type="text" value={this.state.residenceAddr} onChange={this.handleInputChange} name="residenceAddr" className="form-control" id="tenant-repair-address"/> 
             </div>
 
             <div className="form-row">
               <div className="form-group col-md-6">
                 <ion-icon name="outlet"></ion-icon>
                 <label for="tenantCity">City</label>
-                <input type="text" class="form-control" id="tenant-city"/>
+                <input type="text" value={this.state.residenceCity} onChange={this.handleInputChange} name="residenceCity" class="form-control" id="tenant-city"/>
               </div>
 
               <div className="form-group col-md-4">
                 <ion-icon name="pin"></ion-icon>
                 <label for="tenantState">State</label>
-                <select id="tenant-state" class="form-control">
+                <select id="tenant-state" class="form-control" value={this.state.residenceState} onChange={this.handleInputChange} name="residenceState">
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -140,7 +140,7 @@ render () {
               <div className="form-group col-md-2">
                 <ion-icon name="compass"></ion-icon>
                 <label for="tenantZip">Zip</label>
-                <input type="text" class="form-control" id="tenant-zip"/>
+                <input type="text" value={this.state.residenceZip} onChange={this.handleInputChange} name="residenceZip" class="form-control" id="tenant-zip"/>
               </div>
 
             </div>
@@ -148,7 +148,7 @@ render () {
             <div className="form-group">
               <ion-icon name="text"></ion-icon>
               <label for="tenantRepairComments">Comments/Complaints</label>
-              <textarea class="form-control" id="tenant-repair-comments" rows="3" placeholder="Anything else? Let us know below."></textarea>
+              <textarea value={this.state.com00} onChange={this.handleInputChange} name="com00" className="form-control" id="tenant-repair-comments" rows="3" placeholder="Anything else? Let us know below."></textarea>
             </div>
 
             <div className="col text-center submit-button">
