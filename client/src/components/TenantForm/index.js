@@ -2,40 +2,31 @@ import React, {Component} from "react";
 import "./style.css"
 
 class TenantForm extends Component {
-    
-    state = {
-        // fields on input form
-        projectName: "",
-        residenceNumber: "",
-        residenceStreet: "",
-        residenceAddr2: "",
-        residenceCity: "",
-        residenceState: "",
-        residenceZip: "",
-        repairCategory: "",
-        repairDetail: "",
-        repairTimeline: "",
-        otherComments: ""
+    constructor (props) {
+      super (props);
+      this.state = {
+        firstName: '',
+        lastName: '',
+        phoneNumber: '',
+        email: '',
+        residenceAddress: '',
+        city: '',
+        state: '',
+        zip: '',
+        comments: ''
+      }
     }
 
-    handleFormSubmit = event => {
-        event.preventDefault();
-
-        // update values to what user provided
-        this.setState({
-            projectName: "",
-            residenceNumber: "",
-            residenceStreet: "",
-            residenceAddr2: "",
-            residenceCity: "",
-            residenceState: "",
-            residenceZip: "",
-            repairCategory: "",
-            repairDetail: "",
-            repairTimeline: "",
-            otherComments: ""
-        })
+    handleInputChange = event => {
+      const {name, value} = event.target;
+      this.setState({
+        [name]: value
+      });
     }
+
+    // handleFormSubmit = event => {
+    //     event.preventDefault();
+    // }
 
 render () {
     return (
