@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -14,9 +14,6 @@ import GDrive from './components/GDrive'
 //   width: "320px", 
 //   height: "630px"
 // };
-
-
-
 
 class App extends Component {
   render() {
