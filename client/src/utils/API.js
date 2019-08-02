@@ -11,9 +11,9 @@ export default {
     return axios.post("/api/projects", formData);
   },
   updateProject: function(id, formData) {
-    return axios.put(`/api/books/${id}`, formData);
+    return axios.put(`/api/projects/${id}`, formData);
   },
   deleteProject: function(id) {
-    return axios.delete(`/api/books/${id}`);
+    return axios.delete(`/api/projects/${id}`);
   }
 };
