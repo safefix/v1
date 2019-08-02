@@ -11,6 +11,8 @@ import Login from './components/Login';
 import TenantForm from './components/TenantForm';
 import Calendly from './components/Calendly';
 import CalendlyWidget from './components/CalendlyWidget';
+import ProjectSelector from './components/ProjectSelector';
+
 
 // const styleObj = {
 //   width: "320px", 
@@ -25,6 +27,7 @@ class App extends Component {
       <Hero />
       <div className="container">
       <Login />
+      <ProjectSelector />
       <ContractorForm />
       <br/>
       <div className="row">
@@ -35,6 +38,7 @@ class App extends Component {
           <TenantForm />
         </div>
       </div>
+      <ProgressBar />
       </div>
       <br/>
       <Footer />

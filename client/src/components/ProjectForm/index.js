@@ -121,6 +121,12 @@ render () {
                 </div>
             </div>
 
+            <div className="form-group">
+                    <ion-icon name="logo-google"></ion-icon>
+                    <label for="googleDrive">Google Drive Link</label>
+                    <input value={this.state.googleDrive} name="googleDrive" onChange={this.handleInputChange} type="text" className="form-control" id="googleDriveLink"/>
+                </div>
+
             <div className="form-row">
 
                 <div className="form-group col-md-6">
