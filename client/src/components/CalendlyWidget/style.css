@@ -1,0 +1,12 @@
+#schedule-calendly {
+    display: inline-flex;
+    margin-top: 38px;
+    color: white;
+    height: 39px;
+    background-color: #364954;
+    font-size: 18px;
+    padding-left: 110px;
+    width: 500px;
+    border: none !important;
+    border-radius: 10px;
+  }

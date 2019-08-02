@@ -24,6 +24,7 @@ ion-icon {
 #tenant-form-header {
     color: white;
     font-weight: bold;
+    padding-bottom: 15px;
 }
 
 label {

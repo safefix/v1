@@ -7,40 +7,50 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import "./style.css";
+
 
 const useStyles = makeStyles(theme => ({
   root: {
     width: '90%',
   },
+  stepLabel: {
+    backgroundColor: 'yellow'
+  },
   button: {
     marginTop: theme.spacing(1),
     marginRight: theme.spacing(1),
+    backgroundColor: '#364954',
+    color: 'white'
   },
   actionsContainer: {
     marginBottom: theme.spacing(2),
   },
   resetContainer: {
     padding: theme.spacing(3),
-  },
+  }
 }));
 
 function getSteps() {
-  return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+  return ['Initiate a project within handShake', 'Acquire appraisals from local contractors', 'Select contractor', 'Complete project and make down payment', 'Coordinate to schedule repair work', 'Post photos of completed work and generate final invoice', 'Finish payment process and complete project'];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`;
+      return `The Homeowner/Property Manager (PM) initiates a Project within handShake, detailing the need for the repair, complete with images, a full description, and insurance coverage information.`;
     case 1:
-      return 'An ad group contains one or more ads which target a shared set of keywords.';
+      return 'Quotes provided include photos taken by contractor of the repair, with pictures, a description, a place to attach files and a quote (if applicable).';
     case 2:
-      return `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`;
+      return `The Homeowner/PM selects a contractor to complete the requested work.`;
+    case 3:
+      return 'The Homeowner/PM completes an electronic contract with Contractor, as well as optional 3rd parties and makes the deposit/down payment for the work.';
+    case 4:
+      return 'Once payment is received, the Contractor coordinates with the Tenant to schedule repair work, based on availability';
+    case 5:
+      return 'Contractor posts photos of completed work and generates final invoice.'
+    case 6:
+      return 'The Homeowner/PM makes payment as agreed and marks the Project complete.'
     default:
       return 'Unknown step';
   }
@@ -82,7 +92,6 @@ export default function VerticalLinearStepper() {
                   </Button>
                   <Button
                     variant="contained"
-                    color="primary"
                     onClick={handleNext}
                     className={classes.button}
                   >
