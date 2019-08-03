@@ -1,4 +1,6 @@
 const db = require("../models");
+const owner = {};
+
 
 module.exports = {
   findAll: function(req, res) {
@@ -12,6 +14,12 @@ module.exports = {
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  findByUser: function(req, res) {
+    db.Projects
+    .find({where: {ownerid: owner}})
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
     db.Projects
