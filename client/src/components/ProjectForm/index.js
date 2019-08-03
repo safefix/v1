@@ -2,39 +2,35 @@ import React, {Component} from "react";
 import "./style.css"
 
 class ProjectForm extends Component {
-    state = {
-        // fields on input form
-        projectName: "",
-        residenceNumber: "",
-        residenceStreet: "",
-        residenceAddr2: "",
-        residenceCity: "",
-        residenceState: "",
-        residenceZip: "",
-        repairCategory: "",
-        repairDetail: "",
-        repairTimeline: "",
-        otherComments: ""
+    constructor (props) {
+        super (props);
+        this.state = {
+        projectName: '',
+        residenceAddr: '',
+        residenceCity: '',
+        residenceState: '',
+        residenceZip: '',
+        repairCategory: '',
+        repairDetail: '',
+        repairTimeline: '',
+        repairComments: ''
+        }
+
+       // this.handleChange = this.handleChange.bind(this);
+       // this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    handleInputChange = event => {
+       const {name, value} = event.target;
+       this.setState({
+           [name]: value
+           });
+        }
 
     handleFormSubmit = event => {
         event.preventDefault();
-
-        // update values to what user provided
-        this.setState({
-            projectName: "",
-            residenceNumber: "",
-            residenceStreet: "",
-            residenceAddr2: "",
-            residenceCity: "",
-            residenceState: "",
-            residenceZip: "",
-            repairCategory: "",
-            repairDetail: "",
-            repairTimeline: "",
-            otherComments: ""
-        })
     }
+    
 
 render () {
     return (
@@ -44,26 +40,26 @@ render () {
                 <div className="form-group input-section">
                     <ion-icon name="construct" className="icons"></ion-icon>
                     <label for="projectName">Project Name</label>
-                    <input type="text" className="form-control" id="formGroupExampleInput"/>
+                    <input value={this.state.projectName} name="projectName" onChange={this.handleInputChange} type="text" className="form-control" id="formGroupExampleInput"/>
                 </div>
 
                 <div className="form-group">
                     <ion-icon name="home"></ion-icon>
                     <label for="residentialAddress">Residential Address</label>
-                    <input type="text" className="form-control" id="formGroupExampleInput"/>
+                    <input value={this.state.residenceAddr} name="residenceAddr" onChange={this.handleInputChange} type="text" className="form-control" id="formGroupExampleInput"/>
                 </div>
 
             <div className="form-row">
                 <div className="form-group col-md-6">
                     <ion-icon name="outlet"></ion-icon>
                     <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity"/>
+                    <input value={this.state.residenceCity} name="residenceCity" onChange={this.handleInputChange} type="text" className="form-control" id="inputCity"/>
                 </div>
 
                 <div className="form-group col-md-4">
                     <ion-icon name="pin"></ion-icon>
                     <label for="inputState">State</label>
-                      <select id="inputState" class="form-control">
+                      <select id="inputState" value={this.state.residenceState} name="residenceState" onChange={this.handleInputChange} className="form-control">
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
                         <option value="AZ">Arizona</option>
@@ -121,16 +117,22 @@ render () {
                 <div className="form-group col-md-2">
                     <ion-icon name="compass"></ion-icon>
                     <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip"/>
+                    <input value={this.state.residenceZip} name="residenceZip" onChange={this.handleInputChange} type="text" className="form-control" id="inputZip"/>
                 </div>
             </div>
+
+            <div className="form-group">
+                    <ion-icon name="logo-google"></ion-icon>
+                    <label for="googleDrive">Google Drive Link</label>
+                    <input value={this.state.googleDrive} name="googleDrive" onChange={this.handleInputChange} type="text" className="form-control" id="googleDriveLink"/>
+                </div>
 
             <div className="form-row">
 
                 <div className="form-group col-md-6">
                 <ion-icon name="reorder"></ion-icon>
                 <label for="repairCategory">Repair Category:</label>
-                    <select id="repair-category" class="form-control">
+                    <select value={this.state.repairCategory} name="repairCategory" onChange={this.handleInputChange} id="repair-category" className="form-control">
                       <option value="option-1">This</option>
                       <option value="option-2">That</option>
                       <option value="option-3">Or</option>
@@ -141,7 +143,7 @@ render () {
                 <div className="form-group col-md-6">
                 <ion-icon name="alarm"></ion-icon>
                 <label for="repairTimeline">Repair Timeline:</label>
-                    <select id="repair-timeline" className="form-control">
+                    <select value={this.state.repairTimeline} name="repairTimeline" onChange={this.handleInputChange} id="repair-timeline" className="form-control">
                     <option value="ASAP">ASAP</option>
                     <option value="1week">Under 1 Week</option>
                     <option value="2weeks">Under 2 Weeks</option>
@@ -156,17 +158,19 @@ render () {
             <div className="form-group">
               <ion-icon name="clipboard"></ion-icon>
               <label for="repairDetail">Repair Detail</label>
-              <textarea className="form-control" id="repairDetails" rows="2" placeholder="Please share any information that would help interested contractors submit a bid that best fits your needs."></textarea> 
+              <textarea className="form-control" id="repairDetails" rows="2" placeholder="Please share any information that would help interested contractors submit a bid that best fits your needs." value={this.state.repairDetail} name="repairDetail" onChange={this.handleInputChange}></textarea> 
             </div>
 
             <div className="form-group">
                 <ion-icon name="text"></ion-icon>
                 <label for="repairComments">Repair Comments:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Any additional comments? Let us know here."></textarea>
+                <textarea value={this.state.repairComments} onChange={this.handleInputChange} name="repairComments" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Any additional comments? Let us know here."></textarea>
             </div>
 
             <div className="col text-center submit-button">
-            <input className="btn btn-block" type="submit" value="Submit" id="submit-form"/>
+              <button onClick={this.handleFormSubmit} className="btn btn-block" type="submit" value="Submit" id="submit-form">
+                <ion-icon name="checkmark-circle-outline" id="contractor-submit-form-icon"></ion-icon>Submit
+              </button>
             </div>
 
             </form>

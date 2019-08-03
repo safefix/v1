@@ -6,10 +6,14 @@ var axios = require("axios");
 
 class GDrive extends Component {
     state = {
-      gDrive: ""
+      gDrive: "",
+      id:"",
+      url: ""
     }
-
+    // FORMAT FOR URL FOR IFRAME
     // https://drive.google.com/embeddedfolderview?id=1cse1H3HnHNAtH-2la6UG7FnbMXHuwH8e#grid
+
+    // https://drive.google.com/drive/folders/1cse1H3HnHNAtH-2la6UG7FnbMXHuwH8e?usp=sharing
  
     componentDidMount() {
       API.getProject(this.state.ownerid)
@@ -20,24 +24,21 @@ class GDrive extends Component {
           }
         )
           .then(response => {
-            if (response && response.data) {
-              this.setState({ gDrive: response.data });
+            if (response.data) {
+            
+            //check the correct response (object path)
+                this.setState({
+                   url: 'https://drive.google.com/embeddedfolderview?id=' + response.data.split("folders/")[1].split("?")[0] + '#grid'
+                  });
             }
           })
           .catch(error => console.log(error));
       };
 
-      // --------------------------------------------
-      
-      
-      render(){
-
-        //manipulate the url
-        const {gDrive} = this.state.gDrive;
-
-        return (
+        render(){
+          return (
             <div>
-                <iframe src={gDrive} height="500" width="600" />   
+                <iframe src={this.state.url} height="500" width="600" />   
             </div>           
         )
     }

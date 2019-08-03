@@ -5,11 +5,16 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import ProjectForm from './components/ProjectForm';
-import SubmitBid from "./components/SubmitBid";
+import ContractorForm from "./components/ContractorForm";
 import Login from './components/Login';
 import TenantForm from './components/TenantForm';
 import Calendly from './components/Calendly';
 import GDrive from './components/GDrive'
+import CalendlyWidget from './components/CalendlyWidget';
+import ProjectSelector from './components/ProjectSelector';
+import ProgressBar from './components/ProgessBar';
+
+
 // const styleObj = {
 //   width: "320px", 
 //   height: "630px"
@@ -22,19 +27,20 @@ class App extends Component {
       <GDrive />
       <Nav />
       <Hero />
-      <div class="container">
+      <div className="container">
       <Login />
-      <Calendly />
-      <SubmitBid />
+      <ProjectSelector />
+      <ContractorForm />
       <br/>
-      <div class="row">
-        <div class="col-6">
+      <div className="row">
+        <div className="col-6">
           <ProjectForm />
         </div>
-        <div class="col-6">
+        <div className="col-6">
           <TenantForm />
         </div>
       </div>
+      <ProgressBar />
       </div>
       <br/>
       <Footer />
