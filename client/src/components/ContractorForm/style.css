@@ -36,8 +36,9 @@
 
     input[type='file']{
 
-      height:400px;
-      width:400px;
+      height:100px;
+      width:100px;
+      margin-bottom: 100px;
       position:absolute;
       top:0;
       left:0;
@@ -69,4 +70,26 @@
   color: white;
   font-weight: bolder;
   padding-bottom: 15px;
+}
+
+#calendar-button {
+  display: inline-flex;
+  margin-top: 38px;
+  color: white;
+  height: 39px;
+  background-color: #364954;
+  font-size: 18px;
+  padding-left: 140px;
+}
+
+#calendar-button-icon {
+  color: white;
+}
+
+body {
+background-color: lightgrey
+}
+
+#contractor-submit-form-icon {
+  color: white;
 }

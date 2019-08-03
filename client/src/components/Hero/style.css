@@ -17,10 +17,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: .6;
+    opacity: .7;
 }
 
 
 .image-text {
-    opacity: 1;
+    opacity: 1 !important;
+    font-weight: bolder !important;
 }

@@ -28,6 +28,7 @@ ion-icon {
 #form-title {
     color: white;
     font-weight: bold;
+    padding-bottom: 15px;
 }
 
 label {
