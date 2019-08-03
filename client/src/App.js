@@ -28,17 +28,17 @@ class App extends Component {
       <div className="container">
       <Login />
       <ProjectSelector />
-      <ContractorForm />
+      <div className="row"></div>
+      <ProjectForm />
       <br/>
       <div className="row">
         <div className="col-6">
-          <ProjectForm />
+          <ContractorForm />
         </div>
         <div className="col-6">
           <TenantForm />
         </div>
       </div>
-      <ProgressBar />
       </div>
       <br/>
       <Footer />
