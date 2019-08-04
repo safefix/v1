@@ -1,9 +1,11 @@
+require("dotenv").config();
 const express = require("express");
-const routes = require("./routes");
+const routes = require("./routes/api");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const mysql = require("mysql");
 const db = require("./models");
+
 // const jwt = require('express-jwt');
 // const jwtAuthz = require('express-jwt-authz');
 // const jwksRsa = require('jwks-rsa');
@@ -14,8 +16,9 @@ if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "Shalom77&",
-        database: "handShake"
+        password: process.env.LOCALPW,
+        database: "handShake",
+        port: PORT
     });
 }; 
 
@@ -52,7 +55,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-app.use(routes(app, db));
+require(routes)(app);
 
 // Start the API server
 db.sequelize.sync({ force: true }).then(function() {
@@ -60,3 +63,5 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+module.exports = app;

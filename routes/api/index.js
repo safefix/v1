@@ -1,7 +1,7 @@
-const app = require("express").Router();
-const db = require("../../models")
+const db = require("../../models");
+const app = require("express");
 
-module.exports = (app, db) => {
+module.exports = () => {
   app.get( "/Projects", (req, res) =>
     db.Projects.findAll().then( (result) => res.json(result) )
   );
@@ -67,4 +67,8 @@ module.exports = (app, db) => {
       }
     }).then( (result) => res.json(result) )
   );
+  // If no API routes are hit, send the React app
+  app.use(function(req, res) {
+    res.sendFile(path.join(__dirname, "../client/public/index.html"));
+  });
 }
