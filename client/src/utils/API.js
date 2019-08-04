@@ -17,7 +17,6 @@ export default {
   deleteProject: function(id) {
     return axios.delete(`/api/projects/${id}`);
   },
-
   // beginning of Contractor methods
   getContractors: function() {
     return axios.get('/api/contractors');
@@ -39,4 +38,4 @@ export default {
   updateTenant: function(id) {
   return axios.put(`/api/tenants/${id}`);
 }
-}
+};
