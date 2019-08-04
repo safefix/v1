@@ -4,14 +4,15 @@ import './App.css';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
-import ProgressBar from "./components/ProgessBar";
 import ProjectForm from './components/ProjectForm';
 import ContractorForm from "./components/ContractorForm";
 //import Login from './components/Login';
 import TenantForm from './components/TenantForm';
 import Calendly from './components/Calendly';
+import GDrive from './components/GDrive'
 import CalendlyWidget from './components/CalendlyWidget';
 import ProjectSelector from './components/ProjectSelector';
+import ProgressBar from './components/ProgessBar';
 import AllOwnerProjects from './components/AllOwnerProjects';
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
     
     return (
     <div className="App">
+      {/* <GDrive /> */}
       <Nav />
       <Hero />
       <div className="container">
