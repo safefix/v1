@@ -17,7 +17,7 @@ import AllOwnerProjects from './components/AllOwnerProjects';
 class App extends Component {
 
   state = {
-    projectForm: false
+    projectForm: false,
   }
 
   handleProjectFormClick = event => {
