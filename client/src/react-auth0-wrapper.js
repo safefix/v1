@@ -20,8 +20,10 @@ export const Auth0Provider = ({
 
   useEffect(() => {
     const initAuth0 = async () => {
+      console.log('@@@@@@@@@@');
       const auth0FromHook = await createAuth0Client(initOptions);
       setAuth0(auth0FromHook);
+      console.log(auth0FromHook);
 
       if (window.location.search.includes("code=")) {
         const { appState } = await auth0FromHook.handleRedirectCallback();
