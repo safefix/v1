@@ -4,6 +4,9 @@ import { useAuth0 } from "../../react-auth0-wrapper";
 
 const Login = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  console.log(isAuthenticated);
+  console.log(loginWithRedirect);
+  console.log(logout);
 
   return (
     <div>
@@ -16,6 +19,7 @@ const Login = () => {
         <button
           onClick={() =>
             loginWithRedirect({})
+            
           }
         >
           <p className="btnText">LOGIN?</p>
