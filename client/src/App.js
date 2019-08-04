@@ -7,41 +7,61 @@ import Hero from './components/Hero';
 import ProgressBar from "./components/ProgessBar";
 import ProjectForm from './components/ProjectForm';
 import ContractorForm from "./components/ContractorForm";
-import Login from './components/Login';
+//import Login from './components/Login';
 import TenantForm from './components/TenantForm';
 import Calendly from './components/Calendly';
 import CalendlyWidget from './components/CalendlyWidget';
 import ProjectSelector from './components/ProjectSelector';
-
-
-// const styleObj = {
-//   width: "320px", 
-//   height: "630px"
-// };
+import AllOwnerProjects from './components/AllOwnerProjects';
 
 class App extends Component {
-  render() {
+
+  state = {
+    projectForm: false
+  }
+
+  handleProjectFormClick = event => {
+
+    if (this.state.projectForm) {
+      this.setState.projectForm({
+        projectForm: true
+      })
+    }
+  }
+
+
+
+  render(){
+    
     return (
     <div className="App">
       <Nav />
       <Hero />
       <div className="container">
-      <Login />
-      <ProjectSelector />
-      <div className="row"></div>
-      <ProjectForm />
-      <br/>
-      <div className="row">
+      <AllOwnerProjects />
+      </div>
+      <div className="container">
+      <ProjectSelector 
+      handleProjectFormClick={this.handleProjectFormClick}/>
+       <div className="row"></div>
+      <ProjectForm 
+      handleProjectFormClick={this.handleProjectFormClick}/>
+      <br/> 
+     <div className="row">
         <div className="col-6">
           <ContractorForm />
         </div>
         <div className="col-6">
           <TenantForm />
         </div>
-      </div>
+    </div> 
+      <ProgressBar />
       </div>
       <br/>
-      <Footer />
+      <br/>
+      <br/>
+      <br/>
+      {/* <Footer /> */}
     </div>
   );
   }

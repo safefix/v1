@@ -1,22 +1,25 @@
-import React, {Component} from 'react';
+import React from 'react';
 import "./style.css";
+import { getThemeProps } from '@material-ui/styles';
+// import { useAuth0 } from "../../react-auth0-wrapper";
 
-class ProjectSelector extends Component {
 
-  handleOnClick = event => {
-    event.preventDefault();
-  }
+function ProjectSelector (props) {
+// const {isAuthenticated} = useAuth0();
 
-  render() {
+    if (!props.handleProjectFormClick) {
+      return null;
+    }
 
     return (
         <div className="col">
-            <button type="button" className="btn hvr-underline-from-left" onClick={this.handleOnClick}>YOUR PROJECTS</button>
+            <button type="button" className="btn hvr-underline-from-left">YOUR PROJECTS</button>
 
-            <button type="button" className="btn hvr-underline-from-left" onClick={this.handleOnClick}>CREATE A PROJECT</button>
+            <button type="button" className="btn hvr-underline-from-left" onClick={props.handleProjectFormClick}>CREATE A PROJECT</button>
         </div>
     );
 }
-}
+
+
 
 export default ProjectSelector;

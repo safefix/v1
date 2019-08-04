@@ -21,6 +21,11 @@ class ProjectForm extends Component {
         repairComments: ''
         }
 
+            
+    if (!props.handleProjectFormClick) {
+        return null;
+      }
+
        // this.handleChange = this.handleChange.bind(this);
        // this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -35,7 +40,6 @@ class ProjectForm extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
     }
-    
 
 render () {
     return (
@@ -136,12 +140,12 @@ render () {
 
               <div className="form-group col-md-6">
                   <label for="inviteTenant1">Invite Tenant (Optional)</label>
-                  <input value={this.state.inviteTenant1} name="inviteTenant1" onChange={this.handleInputChange} type="text" className="form-control" id="invite-tenant-1"/>
+                  <input value={this.state.inviteTenant1} name="inviteTenant1" onChange={this.handleInputChange} type="text" className="form-control" placeholder="tenant1@gmail.com" id="invite-tenant-1"/>
               </div>
 
               <div className="form-group col-md-6">
                   <label for="inviteTenant2">Invite 2nd Tenant (Optional)</label>
-                  <input value={this.state.inviteTenant2} name="inviteTenant2" onChange={this.handleInputChange} type="text" className="form-control" id="invite-tenant-2"/>
+                  <input value={this.state.inviteTenant2} name="inviteTenant2" onChange={this.handleInputChange} type="text" className="form-control" placeholder="tenant2@gmail.com" id="invite-tenant-2"/>
               </div>
 
             </div>
@@ -150,12 +154,12 @@ render () {
 
             <div className="form-group col-md-6">
                 <label for="invite3rdParty1">Invite 3rd Party (Optional)</label>
-                <input value={this.state.invite3rdParty1} name="invite3rdParty1" onChange={this.handleInputChange} type="text" className="form-control" id="invite-3rd-party-1"/>
+                <input value={this.state.invite3rdParty1} name="invite3rdParty1" onChange={this.handleInputChange} type="text" className="form-control" placeholder="newparty1@gmail.com" id="invite-3rd-party-1"/>
             </div>
 
             <div className="form-group col-md-6">
                 <label for="invite3rdParty2">Invite Another 3rd Party (Optional)</label>
-                <input value={this.state.invite3rdParty2} name="invite3rdParty2" onChange={this.handleInputChange} type="text" className="form-control" id="invite-3rd-party-2"/>
+                <input value={this.state.invite3rdParty2} name="invite3rdParty2" onChange={this.handleInputChange} type="text" className="form-control" placeholder="newparty2@gmail.com" id="invite-3rd-party-2"/>
             </div>
 
             </div>
