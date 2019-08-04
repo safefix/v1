@@ -14,7 +14,7 @@ if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "",
+        password: "Shalom77&",
         database: "handShake"
     });
 }; 
@@ -28,6 +28,7 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
+
 const checkJwt = jwt({
   // Dynamically provide a signing key
   // based on the kid in the header and 
