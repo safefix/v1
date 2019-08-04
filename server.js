@@ -1,11 +1,10 @@
 require("dotenv").config();
 const express = require("express");
-const routes = require("./routes/api");
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const mysql = require("mysql");
 const db = require("./models");
-
 // const jwt = require('express-jwt');
 // const jwtAuthz = require('express-jwt-authz');
 // const jwksRsa = require('jwks-rsa');
@@ -29,8 +28,8 @@ module.exports = connection;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Static directory
-app.use(express.static("public"));
+// // Static directory
+// app.use(express.static("public"));
 
 // const checkJwt = jwt({
 //   // Dynamically provide a signing key
@@ -55,7 +54,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-require(routes)(app);
+app.use(routes);
 
 // Start the API server
 db.sequelize.sync({ force: true }).then(function() {
