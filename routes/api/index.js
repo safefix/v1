@@ -1,7 +1,7 @@
 const app = require("express").Router();
 const db = require("../../models")
 
-module.exports = () => {
+module.exports = (app, db) => {
   app.get( "/Projects", (req, res) =>
     db.Projects.findAll().then( (result) => res.json(result) )
   );

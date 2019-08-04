@@ -4,9 +4,9 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const mysql = require("mysql");
 const db = require("./models");
-const jwt = require('express-jwt');
-const jwtAuthz = require('express-jwt-authz');
-const jwksRsa = require('jwks-rsa');
+// const jwt = require('express-jwt');
+// const jwtAuthz = require('express-jwt-authz');
+// const jwksRsa = require('jwks-rsa');
 
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL)
@@ -29,22 +29,22 @@ app.use(express.json());
 // Static directory
 app.use(express.static("public"));
 
-const checkJwt = jwt({
-  // Dynamically provide a signing key
-  // based on the kid in the header and 
-  // the signing keys provided by the JWKS endpoint.
-  secret: jwksRsa.expressJwtSecret({
-    cache: true,
-    rateLimit: true,
-    jwksRequestsPerMinute: 5,
-    jwksUri: `https://handshake-project.auth0.com/.well-known/jwks.json`
-  }),
+// const checkJwt = jwt({
+//   // Dynamically provide a signing key
+//   // based on the kid in the header and 
+//   // the signing keys provided by the JWKS endpoint.
+//   secret: jwksRsa.expressJwtSecret({
+//     cache: true,
+//     rateLimit: true,
+//     jwksRequestsPerMinute: 5,
+//     jwksUri: `https://handshake-project.auth0.com/.well-known/jwks.json`
+//   }),
 
-  // Validate the audience and the issuer.
-  audience: 'https://api/projects',
-  issuer: `https://handshake-project.auth0.com/`,
-  algorithms: ['RS256']
-});
+//   // Validate the audience and the issuer.
+//   audience: 'https://api/projects',
+//   issuer: `https://handshake-project.auth0.com/`,
+//   algorithms: ['RS256']
+// });
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -52,7 +52,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-app.use(routes)(app);
+app.use(routes(app, db));
 
 // Start the API server
 db.sequelize.sync({ force: true }).then(function() {
