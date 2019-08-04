@@ -17,11 +17,11 @@ function Footer () {
 
     <ul className="navbar-nav ml-auto">
       <li className="nav-item">
-        <a className="nav-link" href="https://localhost:3000">For Developers</a>
+        <a className="nav-link" href="https://localhost:3000/docs">For Developers</a>
       </li>
       
       <li className="nav-item mr-auto">
-        <a className="nav-link" id="contact-us" href="https://localhost:3000">contactus@handshake.com</a>
+        <a className="nav-link" id="contact-us" href="mailto:kstokes16@ufl.edu">Email Us</a>
       </li>
     </ul>
   </div>

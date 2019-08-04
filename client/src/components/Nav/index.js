@@ -17,13 +17,13 @@ function Nav (props) {
 
     <ul className="nav navbar-nav ml-auto">
       <li className="nav-item">
-        <a className="nav-link" href="https://localhost:3000">Contact Us</a>
+        <a className="nav-link" href="https://localhost:3000/contact-us">Contact Us</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="https://localhost:3000">How it Works</a>
+        <a className="nav-link" href="https://localhost:3000/how-it-works">How it Works</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="https://localhost:3000">Testimonials</a>
+        <a className="nav-link" href="https://localhost:3000/testimonials">Testimonials</a>
       </li>
     </ul>
   </div>
