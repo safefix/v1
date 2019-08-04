@@ -17,20 +17,20 @@ import AllOwnerProjects from './components/AllOwnerProjects';
 
 class App extends Component {
 
-  state = {
-    projectForm: false,
-  }
+  // state = {
+  //   projectForm: false,
+  //   createProject: false
+  // }
 
-  handleProjectFormClick = event => {
+  // handleProjectFormClick = event => {
 
-    if (this.state.projectForm) {
-      this.setState.projectForm({
-        projectForm: true
-      })
-    }
-  }
-
-
+  //   if (this.state.projectForm) {
+  //     event.preventDefault();
+  //     this.setState({
+  //       projectForm: true
+  //     })
+  //   }
+  // }
 
   render(){
     
@@ -40,30 +40,28 @@ class App extends Component {
       <Nav />
       <Hero />
       <div className="container">
-      <AllOwnerProjects />
+        <AllOwnerProjects />
       </div>
       <div className="container">
-      <ProjectSelector 
-      handleProjectFormClick={this.handleProjectFormClick}/>
-       <div className="row"></div>
-      <ProjectForm 
-      handleProjectFormClick={this.handleProjectFormClick}/>
-      <br/> 
-     <div className="row">
-        <div className="col-6">
-          <ContractorForm />
+        <ProjectSelector 
+      handleProjectFormClick={this.handleProjectFormClick}
+        />
+        <div className="row"></div>
+          <ProjectForm 
+      addProjectForm={this.handleProjectFormClick}
+          />
+          <br/> 
+       <div className="row">
+         <div className="col-6">
+           <ContractorForm />
+         </div>
+         <div className="col-6">
+           <TenantForm />
         </div>
-        <div className="col-6">
-          <TenantForm />
-        </div>
-    </div> 
+       </div> 
       <ProgressBar />
-      </div>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
       {/* <Footer /> */}
+      </div>
     </div>
   );
   }
