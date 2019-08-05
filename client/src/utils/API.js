@@ -21,11 +21,14 @@ export default {
   getContractors: function() {
     return axios.get('/api/contractors');
   },
+  createContractor: function(formData) {
+    return axios.post("/api/contractors", formData);
+  },
   getContractor: function(id) {   
     return axios.get(`/api/contractors/${id}`);
   },
   updateContractor: function(id) {
-    return axios.put(`/api/projects/${id}`);
+    return axios.put(`/api/contractors/${id}`);
   },
 
   // beginning of Tenant methods
@@ -37,5 +40,8 @@ export default {
 },
   updateTenant: function(id) {
   return axios.put(`/api/tenants/${id}`);
-}
+},
+  createTenant: function(formData) {
+  return axios.post("/api/tenants", formData);
+},  
 };

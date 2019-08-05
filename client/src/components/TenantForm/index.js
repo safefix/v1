@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./style.css"
+import API from "../../utils/API"
 
 class TenantForm extends Component {
     constructor (props) {
@@ -24,9 +25,10 @@ class TenantForm extends Component {
       });
     }
 
-    // handleFormSubmit = event => {
-    //     event.preventDefault();
-    // }
+    handleFormSubmit = event => {
+      API.createTenant(this.state)
+        event.preventDefault();
+    }
 
 render () {
     return (

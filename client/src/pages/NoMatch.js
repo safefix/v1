@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 // import './App.css';
-import Nav from './components/Nav';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
+import Nav from '../components/Nav';
+import Hero from '../components/Hero';
+import Footer from '../components/Footer';
 
 class NoMatch extends Component {
   render () {

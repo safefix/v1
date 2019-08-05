@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./style.css"
+import API from "../../utils/API"
 
 class ProjectForm extends Component {
     constructor (props) {
@@ -13,16 +14,13 @@ class ProjectForm extends Component {
         googleDrive: '',
         inviteTenant1: '',
         inviteTenant2: '',
-        invite3rdParty1: '',
-        invite3rdParty2: '',
+        inviteThirdParty1: '',
+        inviteThirdParty2: '',
         repairCategory: '',
         repairDetail: '',
         repairTimeline: '',
         repairComments: ''
         }
-
-       // this.handleChange = this.handleChange.bind(this);
-       // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleInputChange = event => {
@@ -33,7 +31,9 @@ class ProjectForm extends Component {
         }
 
     handleFormSubmit = event => {
+        API.createProject(this.state)
         event.preventDefault();
+
     }
 
 render () {
@@ -44,7 +44,7 @@ render () {
                 <div className="form-group input-section">
                     <ion-icon name="construct" className="icons"></ion-icon>
                     <label for="projectName">Project Name</label>
-                    <input value={this.state.projectName} name="projectName" onChange={this.handleInputChange} type="text" className="form-control" id="formGroupExampleInput"/>
+                    <input value={this.state.projectName} name="projectName" onChange={this.handleInputChange} type="text" className="form-control" id="formGroupExampleInput" />
                 </div>
 
                 <div className="form-group">
@@ -148,13 +148,13 @@ render () {
             <div className="form-row">
 
             <div className="form-group col-md-6">
-                <label for="invite3rdParty1">Invite 3rd Party (Optional)</label>
-                <input value={this.state.invite3rdParty1} name="invite3rdParty1" onChange={this.handleInputChange} type="text" className="form-control" placeholder="newparty1@gmail.com" id="invite-3rd-party-1"/>
+                <label for="3">Invite 3rd Party (Optional)</label>
+                <input value={this.state.inviteThirdParty1} name="3" onChange={this.handleInputChange} type="text" className="form-control" placeholder="newparty1@gmail.com" id="invite-3rd-party-1"/>
             </div>
 
             <div className="form-group col-md-6">
-                <label for="invite3rdParty2">Invite Another 3rd Party (Optional)</label>
-                <input value={this.state.invite3rdParty2} name="invite3rdParty2" onChange={this.handleInputChange} type="text" className="form-control" placeholder="newparty2@gmail.com" id="invite-3rd-party-2"/>
+                <label for="inviteThirdParty2">Invite Another 3rd Party (Optional)</label>
+                <input value={this.state.inviteThirdParty2} name="inviteThirdParty2" onChange={this.handleInputChange} type="text" className="form-control" placeholder="newparty2@gmail.com" id="invite-3rd-party-2"/>
             </div>
 
             </div>
