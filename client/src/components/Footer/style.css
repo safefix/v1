@@ -7,3 +7,8 @@
     line-height: 20px; /* Vertically center the text there */
     background-color: #364954;
   }
+
+  #shake-footer {
+    color: #156382;
+    font-weight: bolder;
+  }

@@ -1,19 +1,16 @@
 import React, {Component} from 'react';
-import './App.css';
-import Nav from '../components/Nav';
-import Hero from '../components/Hero';
 import ProjectSelector from '../components/ProjectSelector';
 import ProjectForm from '../components/ProjectForm';
 import ProgressBar from '../components/ProgessBar';
 import Footer from '../components/Footer';
+import Hero from '../components/Hero';
 
-class Homeowner extends Component {
+class HomeownerPage extends Component {
   render () {
 
   return (
         <div>
-          <Nav />
-          <Hero />
+        <Hero />
           <div className="container">
             <ProjectSelector />
             <div className="row">
@@ -32,4 +29,4 @@ class Homeowner extends Component {
 }
 }
 
-export default Homeowner;
+export default HomeownerPage;

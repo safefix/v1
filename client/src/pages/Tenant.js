@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './App.css';
 import Nav from '../components/Nav';
 import Hero from '../components/Hero';
 import ProgressBar from '../components/ProgessBar';
@@ -10,7 +9,6 @@ class TenantPage extends Component {
   render () {
   return (
         <div>
-          <Nav />
           <Hero />
           <div className="container">
             <div className="row">
@@ -22,6 +20,7 @@ class TenantPage extends Component {
               </div>
             </div>
           </div>
+          <br/> <br/> <br/> <br/> <br/> <br/>
           <Footer />
         </div>
 

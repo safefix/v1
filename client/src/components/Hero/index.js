@@ -5,7 +5,7 @@ function Hero () {
     return (
         <div className="jumbotron jumbotron-fluid text-center secondary-background image-overlay">
             <div className="image-text">
-                <h1 className="display-4 hero-text"><i><strong>handShake</strong></i></h1>
+                <h1 className="display-4 hero-text"><i><strong>hand<span id="shake">Shake</span></strong></i></h1>
                 <p className="lead hero-subtext">Bringing trust to the residential contract community.</p>
             </div>
         </div>

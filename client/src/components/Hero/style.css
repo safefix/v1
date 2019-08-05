@@ -7,6 +7,12 @@
     color: white;
 }
 
+#shake {
+    color: #156382;
+    font-weight: bolder;
+    font-size: 64px;
+}
+
 .hero-subtext {
     font-weight: bold;
     color: white;
@@ -17,7 +23,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: .7;
+    opacity: .8;
 }
 
 
