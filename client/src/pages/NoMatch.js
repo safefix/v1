@@ -1,14 +1,14 @@
 import React from 'react';
-import './App.css';
-import Nav from './components/Nav';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
+// import './App.css';
+import Nav from '../components/Nav';
+import Hero from '../components/Hero';
+import Footer from '../components/Footer';
 
 function NoMatch() {
   return (
         <div>
-          <Nav />
-          <Hero />
+          {/* <Nav />
+          <Hero /> */}
           <div className="col-xs-12">
             <h1 className="text-center font-weight-bold">404 Page Not Found</h1>
             <hr></hr>

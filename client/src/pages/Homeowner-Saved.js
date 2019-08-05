@@ -14,7 +14,7 @@ class HomeownerSaved extends Component {
   }
 
   getSavedProjects = () => {
-    API.getSavedProjects()
+    API.getProjects()
       .then(res =>
         this.setState({
           projects: res.data

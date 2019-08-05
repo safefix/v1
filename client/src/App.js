@@ -15,7 +15,9 @@ import ProjectSelector from './components/ProjectSelector';
 import ProgressBar from './components/ProgessBar';
 import AllOwnerProjects from './components/AllOwnerProjects';
 import ContractorPage from './pages/Contractor';
-
+import HomeownerPage from './pages/Homeowner-Saved';
+import NoMatchPage from './pages/NoMatch';
+import TenantPage from './pages/Tenant'
 
 
 
@@ -28,9 +30,10 @@ class App extends Component {
             <Nav />
             <Hero />
             <Switch>
-              {/* <Route exact path="/" component={Home} />
-              <Route path="/homeowners" component={HomeownerPage} /> */}
+              <Route path="/tenant" component={TenantPage} />
+              <Route path="/homeowners" component={HomeownerPage} />
               <Route path="/contractors" component={ContractorPage} />
+              <Route component={NoMatchPage} />
             </Switch>
             <Footer />
           </div>
