@@ -31,3 +31,7 @@
     right: 0;
     color: white !important
   }
+
+  .project-selector-buttons {
+    margin-bottom: 30px;
+  }

@@ -12,6 +12,8 @@ class ContractorPage extends Component{
 
     render(){
         return(
+            <div>
+            <Hero />
             <div className='container'>
                 <div className='row'>
                     <div className="col-lg-4">
@@ -25,6 +27,7 @@ class ContractorPage extends Component{
                     </div>
                 </div>
                 <Footer />
+            </div>
             </div>
         )
     }

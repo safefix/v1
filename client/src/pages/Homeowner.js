@@ -1,31 +1,32 @@
 import React, {Component} from 'react';
-import Nav from '../components/Nav';
-import Hero from '../components/Hero';
+import ProjectSelector from '../components/ProjectSelector';
+import ProjectForm from '../components/ProjectForm';
 import ProgressBar from '../components/ProgessBar';
 import Footer from '../components/Footer';
-import TenantForm from '../components/TenantForm';
+import Hero from '../components/Hero';
 
-class TenantPage extends Component {
+class HomeownerPage extends Component {
   render () {
+
   return (
         <div>
-          <Hero />
+        <Hero />
           <div className="container">
+            <ProjectSelector />
             <div className="row">
               <div className="col-lg-4">
                 <ProgressBar />
               </div>
               <div className="col-lg-8">
-                <TenantForm />
+                <ProjectForm />
               </div>
             </div>
           </div>
-          <br/> <br/> <br/> <br/> <br/> <br/>
+          <br/>
           <Footer />
         </div>
-
   );
 }
 }
 
-export default TenantPage;
+export default HomeownerPage;

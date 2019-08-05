@@ -28,10 +28,10 @@ class ProjectSelector extends Component {
     render(){
         console.log(this.state.createProject);
     return (
-        <div className="col">
-            <button type="button" className="btn hvr-underline-from-left" onClick={this.setState({ yourProject: true})}>YOUR PROJECTS</button>
+        <div className="col project-selector-buttons">
+            <button type="button" className="btn hvr-underline-from-left">YOUR PROJECTS</button>
 
-            <button type="button" className="btn hvr-underline-from-left" onClick={this.setState({ createProject: true})}>CREATE A PROJECT</button>
+            <button type="button" className="btn hvr-underline-from-left">CREATE A PROJECT</button>
         </div>
     )};
 }
