@@ -1,0 +1,47 @@
+.project-button, .project-button:hover {
+    margin: 20px;
+    background-color: #ac8764;
+    color: white;
+}
+
+.left-column {
+    background-color: #156382;
+}
+
+.right-column {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.padding-0{
+    padding-right:0;
+    padding-left:0;
+}
+
+.card-title {
+    color: #156382;
+}
+
+.card-text {
+    color: #156382;
+}
+
+#username, #submitted-on {
+    color: #6c757d
+}
+
+.hvr-glow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
+  }
+  .hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  }
+  

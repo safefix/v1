@@ -71,3 +71,9 @@ body {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
+  #shake-logo {
+      color: #156382;
+      font-weight: bolder;
+  }
+

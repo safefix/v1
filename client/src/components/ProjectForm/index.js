@@ -21,11 +21,6 @@ class ProjectForm extends Component {
         repairComments: ''
         }
 
-            
-    if (!props.handleProjectFormClick) {
-        return null;
-      }
-
        // this.handleChange = this.handleChange.bind(this);
        // this.handleSubmit = this.handleSubmit.bind(this);
     }

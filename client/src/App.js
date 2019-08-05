@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import ProjectForm from './components/ProjectForm';
 import ContractorForm from "./components/ContractorForm";
-//import Login from './components/Login';
+import Login from './components/Login';
 import TenantForm from './components/TenantForm';
 import Calendly from './components/Calendly';
 import GDrive from './components/GDrive'
@@ -15,11 +15,15 @@ import ProjectSelector from './components/ProjectSelector';
 import ProgressBar from './components/ProgessBar';
 import AllOwnerProjects from './components/AllOwnerProjects';
 import ContractorPage from './pages/Contractor';
-import HomeownerPage from './pages/Homeowner-Saved';
+import HomeownerPage from './pages/Homeowner';
+import TenantPage from './pages/Tenant';
+import HomeownerSaved from './pages/Homeowner-Saved';
+import SavedProject from './components/SavedProject';
+import HomeownerSavedProject from './pages/Homeowner-Saved-Project';
 import NoMatchPage from './pages/NoMatch';
-import TenantPage from './pages/Tenant'
 
 
+  // handleProjectFormClick = event => {
 
 class App extends Component {
 
@@ -28,11 +32,14 @@ class App extends Component {
         <Router>
           <div className="App">
             <Nav />
-            <Hero />
+            {/* <Login /> */}
             <Switch>
-              <Route path="/tenant" component={TenantPage} />
+              {/* <Route exact path="/" component={Home} /> */}
               <Route path="/homeowners" component={HomeownerPage} />
               <Route path="/contractors" component={ContractorPage} />
+              <Route path="/tenants" component={TenantPage} />
+              <Route path="/savedprojects" component={HomeownerSaved} />
+              <Route path="/savedproject" component={HomeownerSavedProject} />
               <Route component={NoMatchPage} />
             </Switch>
             <Footer />
