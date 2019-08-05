@@ -14,15 +14,15 @@ class HomeownerSaved extends Component {
   //   this.getSavedProjects();
   // }
 
-  // getSavedProjects = () => {
-  //   API.getSavedProjects()
-  //     .then(res =>
-  //       this.setState({
-  //         projects: res.data
-  //       })
-  //     )
-  //     .catch(err => console.log(err));
-  // };
+  getSavedProjects = () => {
+    API.getProjects()
+      .then(res =>
+        this.setState({
+          projects: res.data
+        })
+      )
+      .catch(err => console.log(err));
+  };
 
   handleProjectDelete = id => {
     API.deleteProject(id).then(res => this.getSavedProjects());

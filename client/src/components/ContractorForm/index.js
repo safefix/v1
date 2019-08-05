@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./style.css"
 import CalendlyWidget from "../CalendlyWidget";
+import API from "../../utils/API"
 
 class ContractorForm extends Component {
     constructor (props) {
@@ -25,6 +26,7 @@ class ContractorForm extends Component {
     }
 
     handleFormSubmit = event => {
+      API.createContractor(this.state)
       event.preventDefault();
     }
 
