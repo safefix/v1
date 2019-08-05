@@ -1,9 +1,13 @@
+require("dotenv").config();
 const express = require("express");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const mysql = require("mysql");
-var db = require("./models");
+const db = require("./models");
+// const jwt = require('express-jwt');
+// const jwtAuthz = require('express-jwt-authz');
+// const jwksRsa = require('jwks-rsa');
 
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL)
@@ -11,8 +15,9 @@ if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "",
-        database: "handShake"
+        password: process.env.LOCALPW,
+        database: "handShake",
+        port: PORT
     });
 }; 
 
@@ -23,8 +28,25 @@ module.exports = connection;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Static directory
-app.use(express.static("public"));
+// // Static directory
+// app.use(express.static("public"));
+
+// const checkJwt = jwt({
+//   // Dynamically provide a signing key
+//   // based on the kid in the header and 
+//   // the signing keys provided by the JWKS endpoint.
+//   secret: jwksRsa.expressJwtSecret({
+//     cache: true,
+//     rateLimit: true,
+//     jwksRequestsPerMinute: 5,
+//     jwksUri: `https://handshake-project.auth0.com/.well-known/jwks.json`
+//   }),
+
+//   // Validate the audience and the issuer.
+//   audience: 'https://api/projects',
+//   issuer: `https://handshake-project.auth0.com/`,
+//   algorithms: ['RS256']
+// });
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -32,7 +54,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add routes, both API and view
-app.use(routes)(app);
+app.use(routes);
 
 // Start the API server
 db.sequelize.sync({ force: true }).then(function() {
@@ -40,3 +62,5 @@ db.sequelize.sync({ force: true }).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+module.exports = app;

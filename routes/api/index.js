@@ -1,8 +1,13 @@
+const path = require("path");
 const router = require("express").Router();
-const controller = require("../../controllers/controller");
+const Projects = require("./Projects")
 
-router
-  .route("/api/projects")
-  .get(controller.findAll());
+// Model routes
+router.use("/Projects", Projects);
+
+// For anything else, render the html page
+router.use(function(req, res) {
+  res.sendFile(path.join(__dirname, "../../client/build/index.html"));
+});
 
 module.exports = router;
