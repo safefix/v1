@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import ProjectForm from './components/ProjectForm';
 import ContractorForm from "./components/ContractorForm";
-import LoginPage from './pages/Login';
+// import LoginPage from './pages/Login';
 import TenantForm from './components/TenantForm';
 import Calendly from './components/Calendly';
 import GDrive from './components/GDrive'
@@ -34,12 +34,12 @@ class App extends Component {
             <Nav />
             {/* <Login /> */}
             <Switch>
-              <Route exact path="/" component={LoginPage} />
+              {/* <Route exact path="/" component={LoginPage} /> */}
               <Route path="/homeowners" component={HomeownerPage} />
               <Route path="/contractors" component={ContractorPage} />
               <Route path="/tenants" component={TenantPage} />
               <Route path="/savedprojects" component={HomeownerSaved} />
-              <Route path="/savedproject" component={HomeownerSavedProject} />
+              <Route path="/savedproject" component={SavedProject} />
               <Route component={NoMatchPage} />
             </Switch>
             <Footer />

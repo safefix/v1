@@ -2,43 +2,43 @@ import React from "react";
 import "./style.css";
 import { useAuth0 } from "../../react-auth0-wrapper";
 
-const Login = () => {
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
-  console.log(isAuthenticated);
-  console.log(loginWithRedirect);
-  console.log(logout);
+// const Login = () => {
+//   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
+//   console.log(isAuthenticated);
+//   console.log(loginWithRedirect);
+//   console.log(logout);
 
-  return (
-    <div>
-      {!isAuthenticated && (
+//   return (
+//     <div>
+//       {!isAuthenticated && (
 
-        <div id="holder">
+//         <div id="holder">
 
-        <div className="button">
+//         <div className="button">
 
-        <button
-          onClick={() =>
-            loginWithRedirect({})
+//         <button
+//           onClick={() =>
+//             loginWithRedirect({})
             
-          }
-        >
-          <p className="btnText">LOGIN?</p>
-          <div className="btnTwo">
-            <p className="btnText2">GO!</p>
-          </div>
-        </button>
+//           }
+//         >
+//           <p className="btnText">LOGIN?</p>
+//           <div className="btnTwo">
+//             <p className="btnText2">GO!</p>
+//           </div>
+//         </button>
 
-        </div>
+//         </div>
 
-        </div>
+//         </div>
 
 
-      )}
+//       )}
 
-      {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+//       {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
 
-    </div>
-  );
-};
+//     </div>
+//   );
+// };
 
 export default Login;

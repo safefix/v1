@@ -9,6 +9,7 @@
     background-color: #156382;
     color: white !important;
     margin: 20px;
+    font-size: 24px;
   }
   .hvr-underline-from-left:before {
     content: "";

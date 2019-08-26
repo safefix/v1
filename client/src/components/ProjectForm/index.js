@@ -40,7 +40,7 @@ render () {
     return (
         <div>
             <form className="text-left project-form secondary-background">
-              <h4 className="text-center" id="form-title">Project Form</h4>
+              <h4 className="text-center" id="form-title">YOUR NEW PROJECT</h4>
                 <div className="form-group input-section">
                     <ion-icon name="construct" className="icons"></ion-icon>
                     <label for="projectName">Project Name</label>

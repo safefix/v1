@@ -29,9 +29,11 @@ class ProjectSelector extends Component {
         console.log(this.state.createProject);
     return (
         <div className="col project-selector-buttons">
-            <button type="button" className="btn hvr-underline-from-left">YOUR PROJECTS</button>
+          <button type="button" className="btn hvr-underline-from-left">CREATE A PROJECT
+          </button>
 
-            <button type="button" className="btn hvr-underline-from-left">CREATE A PROJECT</button>
+          <button type="button" className="btn hvr-underline-from-left">VIEW YOUR PROJECTS
+          </button>
         </div>
     )};
 }
