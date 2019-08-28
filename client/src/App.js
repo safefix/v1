@@ -21,11 +21,34 @@ import HomeownerSaved from './pages/Homeowner-Saved';
 import SavedProject from './components/SavedProject';
 import HomeownerSavedProject from './pages/Homeowner-Saved-Project';
 import NoMatchPage from './pages/NoMatch';
+import LoginPage from './pages/Login';
 
 
   // handleProjectFormClick = event => {
 
 class App extends Component {
+  state = {
+    projectForm: false,
+    allProjects: false
+  };
+
+  handleOnClick = event => {
+    const viewProjectForm = this.state.projectForm;
+    const viewAllProjects = this.state.allProjects
+
+    if (viewProjectForm) {
+      this.setState({
+        projectForm: true
+      })
+    }
+
+    if (viewAllProjects) {
+      this.setState({
+        allProjects: true
+      })
+    }
+  }
+  
 
   render(){
     return (
@@ -34,8 +57,9 @@ class App extends Component {
             <Nav />
             {/* <Login /> */}
             <Switch>
-              {/* <Route exact path="/" component={LoginPage} /> */}
-              <Route path="/homeowners" component={HomeownerPage} />
+              <Route exact path="/" component={LoginPage} />
+              <Route path="/homeowners" component={HomeownerPage}
+              handleOnClick={this.handleOnClick} />
               <Route path="/contractors" component={ContractorPage} />
               <Route path="/tenants" component={TenantPage} />
               <Route path="/savedprojects" component={HomeownerSaved} />

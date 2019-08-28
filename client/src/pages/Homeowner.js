@@ -6,8 +6,7 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import SavedProject from '../components/SavedProject';
 
-class HomeownerPage extends Component {
-  render () {
+function HomeownerPage (props) {
 
   return (
         <div>
@@ -15,21 +14,20 @@ class HomeownerPage extends Component {
           <div className="container">
             <h3 id="project-description">Welcome to handShake! Get started below.</h3>
             <br></br>
-            <ProjectSelector />
-            <div className="row">
-              {/* <div className="col-lg-4">
+            <ProjectSelector onClick={props.handleOnClick} />
+            {/* <div className="row">
+              <div className="col-lg-4">
                 <ProgressBar />
-              </div> */}
+              </div>
               <div className="col-lg-12">
                 <ProjectForm />
               </div>
-            </div>
+            </div> */}
           </div>
           <br/>
           <Footer />
         </div>
   );
-}
 }
 
 export default HomeownerPage;

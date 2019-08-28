@@ -36,3 +36,7 @@
   .project-selector-buttons {
     margin-bottom: 30px;
   }
+
+  .btn {
+    width: 300px;
+  }
