@@ -44,7 +44,6 @@ class SavedProject extends Component {
                   <h4 className="card-text" id="repair-cateogry">Repair Category:</h4>
                   <h4 className="card-text" id="repair-timeline">Repair Timeline:</h4>
                     {/* <button type="button" className="btn project-button hvr-glow" id="invite-party">Invite a party</button> */}
-                    <button type="button" className="btn project-button hvr-glow" id="view-project-files" onClick={this.viewProjects}>View project files</button>
                     <button type="button" className="btn project-button hvr-glow" id="edit-project">Edit this project</button>
                     <button type="button" className="btn project-button hvr-glow" id="delete-project" onClick={this.deleteProject}>Delete this project</button>
                 </div>

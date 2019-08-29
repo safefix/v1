@@ -33,3 +33,7 @@
     opacity: 1 !important;
     font-weight: bolder !important;
 }
+
+body {
+    font-family: 'Arimo', sans-serif;
+  }

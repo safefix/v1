@@ -11,6 +11,7 @@ class LoginPage extends Component {
   return (
         <div>
           <Hero />
+          <ProjectSelector />
           {/* <Login /> */}
           {/* <ProjectSelector /> */}
         </div>

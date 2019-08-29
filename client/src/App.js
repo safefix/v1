@@ -27,30 +27,52 @@ import LoginPage from './pages/Login';
   // handleProjectFormClick = event => {
 
 class App extends Component {
+
+  // state = {
+  //   projectForm: false,
+  //   allProjects: false
+  // };
+
+  // handleOnClick = event => {
+  //   const viewProjectForm = this.state.projectForm;
+  //   const viewAllProjects = this.state.allProjects
+
+  //   if (viewProjectForm) {
+  //     this.setState({
+  //       projectForm: true
+  //     })
+  //   }
+
+  //   if (viewAllProjects) {
+  //     this.setState({
+  //       allProjects: true
+  //     })
+  //   }
+  // }
+
   state = {
-    projectForm: false,
-    allProjects: false
-  };
-
-  handleOnClick = event => {
-    const viewProjectForm = this.state.projectForm;
-    const viewAllProjects = this.state.allProjects
-
-    if (viewProjectForm) {
-      this.setState({
-        projectForm: true
-      })
-    }
-
-    if (viewAllProjects) {
-      this.setState({
-        allProjects: true
-      })
-    }
+    displayProjectForm: false,
+    displayAllProjects: false
   }
   
+  showProjectForm = () => {
+    this.setState({
+      displayProjectForm: true
+    })
+  }
 
-  render(){
+  showAllProjects = () => {
+    this.setState({
+      displayAllProjects: true
+    })
+  }
+
+  render() {
+
+    if (this.state.showProjectForm) {
+      return <ProjectForm />
+    }
+
     return (
         <Router>
           <div className="App">
@@ -58,8 +80,7 @@ class App extends Component {
             {/* <Login /> */}
             <Switch>
               <Route exact path="/" component={LoginPage} />
-              <Route path="/homeowners" component={HomeownerPage}
-              handleOnClick={this.handleOnClick} />
+              <Route path="/homeowners" component={HomeownerPage} button onClick={this.showProjectForm}/>
               <Route path="/contractors" component={ContractorPage} />
               <Route path="/tenants" component={TenantPage} />
               <Route path="/savedprojects" component={HomeownerSaved} />

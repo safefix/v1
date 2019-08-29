@@ -30,3 +30,7 @@ ion-icon {
 label {
     color: #364954;
 }
+
+body {
+    font-family: 'Arimo', sans-serif;
+  }

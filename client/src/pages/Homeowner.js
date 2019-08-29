@@ -6,23 +6,25 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import SavedProject from '../components/SavedProject';
 
+
 function HomeownerPage (props) {
 
   return (
         <div>
         <Hero />
           <div className="container">
-            <h3 id="project-description">Welcome to handShake! Get started below.</h3>
+            {/* <h3 id="project-description">Welcome to handShake! Get started below.</h3>
             <br></br>
-            <ProjectSelector onClick={props.handleOnClick} />
-            {/* <div className="row">
+            {props.displayProjectForm}
+            <button>Hello World!</button> */}
+            <div className="row">
               <div className="col-lg-4">
                 <ProgressBar />
               </div>
-              <div className="col-lg-12">
+              <div className="col-lg-8">
                 <ProjectForm />
               </div>
-            </div> */}
+            </div>
           </div>
           <br/>
           <Footer />

@@ -40,7 +40,7 @@ render () {
     return (
         <div>
             <form className="text-left project-form secondary-background">
-              <h4 className="text-center" id="form-title">YOUR NEW PROJECT</h4>
+              <h4 className="text-center" id="form-title">Create a Project</h4>
                 <div className="form-group input-section">
                     <ion-icon name="construct" className="icons"></ion-icon>
                     <label for="projectName">Project Name</label>
@@ -135,12 +135,12 @@ render () {
 
               <div className="form-group col-md-6">
                   <label for="inviteTenant1">Invite Tenant (Optional)</label>
-                  <input value={this.state.inviteTenant1} name="inviteTenant1" onChange={this.handleInputChange} type="text" className="form-control" placeholder="tenant1@gmail.com" id="invite-tenant-1"/>
+                  <input value={this.state.inviteTenant1} name="inviteTenant1" onChange={this.handleInputChange} type="text" className="form-control" id="invite-tenant-1"/>
               </div>
 
               <div className="form-group col-md-6">
                   <label for="inviteTenant2">Invite 2nd Tenant (Optional)</label>
-                  <input value={this.state.inviteTenant2} name="inviteTenant2" onChange={this.handleInputChange} type="text" className="form-control" placeholder="tenant2@gmail.com" id="invite-tenant-2"/>
+                  <input value={this.state.inviteTenant2} name="inviteTenant2" onChange={this.handleInputChange} type="text" className="form-control" id="invite-tenant-2"/>
               </div>
 
             </div>
@@ -149,12 +149,12 @@ render () {
 
             <div className="form-group col-md-6">
                 <label for="3">Invite 3rd Party (Optional)</label>
-                <input value={this.state.inviteThirdParty1} name="3" onChange={this.handleInputChange} type="text" className="form-control" placeholder="newparty1@gmail.com" id="invite-3rd-party-1"/>
+                <input value={this.state.inviteThirdParty1} name="3" onChange={this.handleInputChange} type="text" className="form-control"  id="invite-3rd-party-1"/>
             </div>
 
             <div className="form-group col-md-6">
-                <label for="inviteThirdParty2">Invite Another 3rd Party (Optional)</label>
-                <input value={this.state.inviteThirdParty2} name="inviteThirdParty2" onChange={this.handleInputChange} type="text" className="form-control" placeholder="newparty2@gmail.com" id="invite-3rd-party-2"/>
+                <label for="inviteThirdParty2">Invite Additional 3rd Party (Optional)</label>
+                <input value={this.state.inviteThirdParty2} name="inviteThirdParty2" onChange={this.handleInputChange} type="text" className="form-control" id="invite-3rd-party-2"/>
             </div>
 
             </div>
@@ -165,10 +165,10 @@ render () {
                 <ion-icon name="reorder"></ion-icon>
                 <label for="repairCategory">Repair Category:</label>
                     <select value={this.state.repairCategory} name="repairCategory" onChange={this.handleInputChange} id="repair-category" className="form-control">
-                      <option value="option-1">This</option>
-                      <option value="option-2">That</option>
-                      <option value="option-3">Or</option>
-                      <option value="option-4">This and That</option>
+                      <option value="option-1">Appliances</option>
+                      <option value="option-2">Plumbing</option>
+                      <option value="option-3">Air Conditioning</option>
+                      <option value="option-4">Other</option>
                     </select>
                 </div>
 
@@ -190,13 +190,13 @@ render () {
             <div className="form-group">
               <ion-icon name="clipboard"></ion-icon>
               <label for="repairDetail">Repair Detail</label>
-              <textarea className="form-control" id="repairDetails" rows="2" placeholder="Please share any information that would help interested contractors submit a bid that best fits your needs." value={this.state.repairDetail} name="repairDetail" onChange={this.handleInputChange}></textarea> 
+              <textarea className="form-control" id="repairDetails" rows="2" value={this.state.repairDetail} name="repairDetail" onChange={this.handleInputChange}></textarea> 
             </div>
 
             <div className="form-group">
                 <ion-icon name="text"></ion-icon>
                 <label for="repairComments">Repair Comments:</label>
-                <textarea value={this.state.repairComments} onChange={this.handleInputChange} name="repairComments" class="form-control" id="exampleFormControlTextarea1" rows="2" placeholder="Any additional comments? Let us know here."></textarea>
+                <textarea value={this.state.repairComments} onChange={this.handleInputChange} name="repairComments" class="form-control" id="exampleFormControlTextarea1" rows="2" ></textarea>
             </div>
 
             <div className="col text-center submit-button">
