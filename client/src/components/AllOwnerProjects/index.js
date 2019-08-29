@@ -10,7 +10,7 @@ function AllOwnerProjects () {
       <div>
         
         <div className="col mx-auto offset-*">
-        <h2 id="current-projects-header">Your Current Projects:</h2>
+        <h2 id="current-projects-header">YOUR PROJECTS:</h2>
         </div>
 
           <div className="card project-card hvr-reveal" style={styleObj}>

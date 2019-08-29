@@ -35,7 +35,7 @@ class ContractorForm extends Component {
             <div>
             
             <form className="submit-bid-form text-left secondary-background">
-                <h4 className="text-center" id="submit-bid-form-title">Contractor Form</h4>
+                <h4 className="text-center" id="submit-bid-form-title">Submit a Proposal</h4>
                 
                 <div className="form-row">
                   <div className="form-group col-md-6 form-first-name">
@@ -82,7 +82,7 @@ class ContractorForm extends Component {
                   </div>
 
                   <div className="form-group col-md-3 text-center">
-                  <ion-icon name="attach"></ion-icon>
+                  {/* <ion-icon name="attach"></ion-icon> */}
                   <label for="attach-images text-center">Attach Important Files</label>
                   
 

@@ -1,40 +1,24 @@
 import React, {Component} from "react";
 import "./style.css";
+import HomeownerPage from "../../pages/Homeowner";
 // import { useAuth0 } from "../../react-auth0-wrapper";
 
 
-class ProjectSelector extends Component {
+function ProjectSelector (props) {
 // const {isAuthenticated} = useAuth0();
-
-    state = {
-        yourProject: false,
-        createProject: false
-    }
     
-
-    // handleProjectClick = event => {
-    //     if (event) {
-    //     this.setState({
-    //         yourProject: true
-    //     })
-    //     }
-    //     else if (event){
-    //         this.setState({
-    //         createProject: true
-    //         })
-    //     }
-    //     }
   
-    render(){
-        console.log(this.state.createProject);
     return (
-        <div className="col project-selector-buttons">
-            <button type="button" className="btn hvr-underline-from-left">YOUR PROJECTS</button>
+        <div className="project-selector-buttons">
 
-            <button type="button" className="btn hvr-underline-from-left">CREATE A PROJECT</button>
+          <button path="/homeowners" className="btn hvr-underline-from-left" id="create-project" >CREATE A PROJECT
+          </button>
+
+          <button onClick={props.handleOnClick} type="button" className="btn hvr-underline-from-left" id="view-project">VIEW YOUR PROJECTS
+          </button>
+
         </div>
     )};
-}
 
 
 

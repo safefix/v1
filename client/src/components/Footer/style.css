@@ -1,14 +1,13 @@
 .sticky-footer {
-    position: fixed;
     bottom: 0;
+    position: fixed;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 70px;
-    line-height: 20px; /* Vertically center the text there */
+    height: 50px;
     background-color: #364954;
+    margin-top: 150px;
   }
 
-  #shake-footer {
-    color: #156382;
-    font-weight: bolder;
+  body {
+    font-family: 'Arimo', sans-serif;
   }

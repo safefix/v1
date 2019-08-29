@@ -5,17 +5,19 @@
 .hero-text {
     font-weight: bolder;
     color: white;
+    font-size: 72px;
 }
 
 #shake {
     color: #156382;
     font-weight: bolder;
-    font-size: 64px;
+    font-size: 80px;
 }
 
 .hero-subtext {
     font-weight: bold;
     color: white;
+    font-size: 30px;
 }
 
 .jumbotron {
@@ -31,3 +33,7 @@
     opacity: 1 !important;
     font-weight: bolder !important;
 }
+
+body {
+    font-family: 'Arimo', sans-serif;
+  }

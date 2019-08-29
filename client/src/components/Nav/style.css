@@ -4,17 +4,17 @@ body {
 
 .nav-link, .navbar-brand {
     color: white;
+    margin-right: 16px;
 }
 
 .nav-link:hover {
-    border: 1px solid #9aaebb;
     height: 100%;
-    margin: 2px;
     color: white;
 }
 
 .nav-item {
     font-size: 18px;
+
 }
 
 .nav-background {
@@ -40,7 +40,12 @@ body {
     color: white;
 }
 
-.hvr-overline-reveal {
+  #shake-logo {
+      color: #156382;
+      font-weight: bolder;
+  }
+
+  .hvr-underline-reveal {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -49,17 +54,17 @@ body {
     position: relative;
     overflow: hidden;
   }
-  .hvr-overline-reveal:before {
+  .hvr-underline-reveal:before {
     content: "";
     position: absolute;
     z-index: -1;
     left: 0;
     right: 0;
-    top: 0;
+    bottom: 0;
     background: #2098D1;
     height: 4px;
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
     -webkit-transition-property: transform;
     transition-property: transform;
     -webkit-transition-duration: 0.3s;
@@ -67,13 +72,8 @@ body {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
-  .hvr-overline-reveal:hover:before, .hvr-overline-reveal:focus:before, .hvr-overline-reveal:active:before {
+  .hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-  }
-
-  #shake-logo {
-      color: #156382;
-      font-weight: bolder;
   }
 

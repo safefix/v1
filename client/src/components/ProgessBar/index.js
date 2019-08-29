@@ -74,6 +74,12 @@ export default function VerticalLinearStepper() {
   }
 
   return (
+    <div>
+      <div className="row text-center">
+        <div className="col-lg-12 how-it-works">
+          <h4>How it all works:</h4>
+        </div>
+      </div>
     <div className={classes.root}>
       <Stepper activeStep={activeStep} orientation="vertical">
         {steps.map((label, index) => (
@@ -111,6 +117,7 @@ export default function VerticalLinearStepper() {
           </Button>
         </Paper>
       )}
+    </div>
     </div>
   );
 }

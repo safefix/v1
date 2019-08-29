@@ -22,10 +22,11 @@ class ContractorPage extends Component{
                     <div className="col-lg-8">
                     <ContractorForm />
                     </div>
-                    <div className='row'  >
+                    {/* <div className='row'  >
                         <GDrive />
-                    </div>
+                    </div> */}
                 </div>
+                <br/> <br/> <br></br> <br></br>
                 <Footer />
             </div>
             </div>

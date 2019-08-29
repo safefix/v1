@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import ProjectForm from './components/ProjectForm';
 import ContractorForm from "./components/ContractorForm";
-import LoginPage from './pages/Login';
+// import LoginPage from './pages/Login';
 import TenantForm from './components/TenantForm';
 import Calendly from './components/Calendly';
 import GDrive from './components/GDrive'
@@ -21,13 +21,58 @@ import HomeownerSaved from './pages/Homeowner-Saved';
 import SavedProject from './components/SavedProject';
 import HomeownerSavedProject from './pages/Homeowner-Saved-Project';
 import NoMatchPage from './pages/NoMatch';
+import LoginPage from './pages/Login';
 
 
   // handleProjectFormClick = event => {
 
 class App extends Component {
 
-  render(){
+  // state = {
+  //   projectForm: false,
+  //   allProjects: false
+  // };
+
+  // handleOnClick = event => {
+  //   const viewProjectForm = this.state.projectForm;
+  //   const viewAllProjects = this.state.allProjects
+
+  //   if (viewProjectForm) {
+  //     this.setState({
+  //       projectForm: true
+  //     })
+  //   }
+
+  //   if (viewAllProjects) {
+  //     this.setState({
+  //       allProjects: true
+  //     })
+  //   }
+  // }
+
+  state = {
+    displayProjectForm: false,
+    displayAllProjects: false
+  }
+  
+  showProjectForm = () => {
+    this.setState({
+      displayProjectForm: true
+    })
+  }
+
+  showAllProjects = () => {
+    this.setState({
+      displayAllProjects: true
+    })
+  }
+
+  render() {
+
+    if (this.state.showProjectForm) {
+      return <ProjectForm />
+    }
+
     return (
         <Router>
           <div className="App">
@@ -35,11 +80,11 @@ class App extends Component {
             {/* <Login /> */}
             <Switch>
               <Route exact path="/" component={LoginPage} />
-              <Route path="/homeowners" component={HomeownerPage} />
+              <Route path="/homeowners" component={HomeownerPage} button onClick={this.showProjectForm}/>
               <Route path="/contractors" component={ContractorPage} />
               <Route path="/tenants" component={TenantPage} />
               <Route path="/savedprojects" component={HomeownerSaved} />
-              <Route path="/savedproject" component={HomeownerSavedProject} />
+              <Route path="/savedproject" component={SavedProject} />
               <Route component={NoMatchPage} />
             </Switch>
             <Footer />

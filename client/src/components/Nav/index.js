@@ -11,19 +11,19 @@ function Nav (props) {
   <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav">
       <li className="nav-item">
-        <a className="navbar-brand" href="https://localhost:3000">hand<span id="shake-logo">Shake</span></a>
+        <a className="navbar-brand" href="http://localhost:3000">hand<span id="shake-logo">Shake</span></a>
       </li>
     </ul>
 
     <ul className="nav navbar-nav ml-auto">
       <li className="nav-item">
-        <a className="nav-link" href="https://localhost:3000/contact-us">Contact Us</a>
+        <a className="nav-link hvr-underline-reveal" href="http://localhost:3000/homeowners">Homeowners</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="https://localhost:3000/how-it-works">How it Works</a>
+        <a className="nav-link hvr-underline-reveal" href="http://localhost:3000/contractors">Contractors</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="https://localhost:3000/testimonials">Testimonials</a>
+        <a className="nav-link hvr-underline-reveal" href="http://localhost:3000/tenants">Tenants</a>
       </li>
     </ul>
   </div>

@@ -4,15 +4,19 @@ import ProjectForm from '../components/ProjectForm';
 import ProgressBar from '../components/ProgessBar';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
+import SavedProject from '../components/SavedProject';
 
-class HomeownerPage extends Component {
-  render () {
+
+function HomeownerPage (props) {
 
   return (
         <div>
         <Hero />
           <div className="container">
-            <ProjectSelector />
+            {/* <h3 id="project-description">Welcome to handShake! Get started below.</h3>
+            <br></br>
+            {props.displayProjectForm}
+            <button>Hello World!</button> */}
             <div className="row">
               <div className="col-lg-4">
                 <ProgressBar />
@@ -26,7 +30,6 @@ class HomeownerPage extends Component {
           <Footer />
         </div>
   );
-}
 }
 
 export default HomeownerPage;

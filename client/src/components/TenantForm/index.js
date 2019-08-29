@@ -36,7 +36,7 @@ render () {
 
       <form className="text-left tenant-form secondary-background">
 
-              <h4 className="text-center" id="tenant-form-header">Tenant Form</h4>
+              <h4 className="text-center" id="tenant-form-header">Request a Fix</h4>
 
                 <div className="form-row">
 
@@ -150,7 +150,7 @@ render () {
             <div className="form-group">
               <ion-icon name="text"></ion-icon>
               <label for="tenantRepairComments">Comments/Complaints</label>
-              <textarea value={this.state.com00} onChange={this.handleInputChange} name="com00" className="form-control" id="tenant-repair-comments" rows="3" placeholder="Anything else? Let us know below."></textarea>
+              <textarea value={this.state.com00} onChange={this.handleInputChange} name="com00" className="form-control" id="tenant-repair-comments" rows="3"></textarea>
             </div>
 
             <div className="col text-center submit-button">
